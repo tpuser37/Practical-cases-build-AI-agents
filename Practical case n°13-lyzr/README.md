@@ -1,3 +1,4 @@
 ## Multi-Agent Knowledge Base Use Case with Lyzr AI ##
-https://github.com/user-attachments/assets/ae8a4dac-331a-4d29-8807-fc18a5f0fc9a
+
+https://github.com/user-attachments/assets/7190aec2-2e34-4136-9ac8-c1f2f31c1ac1
 
