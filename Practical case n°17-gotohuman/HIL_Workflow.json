@@ -1,0 +1,254 @@
+{
+  "name": "HIL_Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -448,
+        32
+      ],
+      "id": "ee4d653a-b97d-4381-916d-24ef7fdf746a",
+      "name": "When chat message received",
+      "webhookId": "2a62822c-0fc0-4367-9ca3-4ef93d9c8c6e"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are an AI assistant specialized in analyzing patient submissions. \nFor each patient submission, evaluate whether it is:\n\n1. Novel: clearly original and not found in prior art\n2. Non-novel: already known, obvious, or disclosed in prior art\n\nRespond clearly and concisely, provide a brief justification for your classification (1–2 sentences), and maintain a professional and neutral tone. Do not include irrelevant information."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -240,
+        32
+      ],
+      "id": "5f141143-9875-48eb-b551-bfb84e4bfc2e",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -144,
+        256
+      ],
+      "id": "0ace8b8f-25f8-4fa2-beaa-5b7e57da54a4",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "model": "mistral-medium",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+      "typeVersion": 1,
+      "position": [
+        -384,
+        240
+      ],
+      "id": "349b0098-3afd-4fea-b9b3-53e997e6b1b2",
+      "name": "Mistral Cloud Chat Model",
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "cS1OuqIYok12qMoW",
+          "name": "Mistral Cloud account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "sendTo": "hajarmachmoum546@gmail.com",
+        "subject": "Approval required",
+        "message": "could you approve or reject this action?",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        112,
+        32
+      ],
+      "id": "29a9d86f-c720-4b45-8056-5ff5b7c3d607",
+      "name": "Send a message",
+      "webhookId": "92878738-25a0-405d-8f0b-a4d8ebf86635",
+      "alwaysOutputData": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "CJXh9Ek21UlLMoPu",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "1dae77fe-b68f-4e1b-af36-2f4567a1fe82",
+              "leftValue": "={{ $json.data.approved }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        320,
+        32
+      ],
+      "id": "dd604e54-2a42-40d9-b381-eb192142b194",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "operation": "html",
+        "binaryPropertyName": "={{ $json.output }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        832,
+        32
+      ],
+      "id": "c152b45b-39d1-4371-8229-25dddb3b3cd9",
+      "name": "Convert to File"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "03d5c5b7-7176-49cb-9197-027724b31f5d",
+              "name": "output",
+              "value": "={{ $('AI Agent').item.json.output }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        576,
+        16
+      ],
+      "id": "906738f2-8aeb-4c8b-bd3f-6e8a2cc7dcf0",
+      "name": "Edit Fields"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mistral Cloud Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "versionId": "512613c0-4fea-4b98-baaf-8f68a936a9f1",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "0774076a3d831eff4e645a8cc9707f491dae7a5a68c607269055f96d05a33e4d"
+  },
+  "id": "S4BnLKcEWxCKgviG",
+  "tags": []
+}

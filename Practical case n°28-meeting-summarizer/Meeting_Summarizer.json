@@ -1,0 +1,213 @@
+{
+  "name": "Meeting Summarizer Workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -608,
+        304
+      ],
+      "id": "fdaa0584-a11b-41a5-9f4f-49336a50990d",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "https://drive.google.com/file/d/1aWtev_dJiGikQgPXsGOXN48JM2ghnEOf/view?usp=sharing",
+          "mode": "url"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -384,
+        304
+      ],
+      "id": "509ee4c6-789b-463d-920e-1f450cebb365",
+      "name": "Download file"
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "operation": "transcribe",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        -160,
+        304
+      ],
+      "id": "02dcf9d1-5739-49a3-bcfc-03594f990929",
+      "name": "Transcribe a recording"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.text }}",
+        "options": {
+          "systemMessage": "=You are a professional assistant tasked with summarizing business meetings.\n\nGiven the following transcript of a meeting (as user prompt), do the following:\n1. Provide a concise **summary** of the meeting (3-5 bullet points).\n2. Clearly define the **main topic or purpose** of the meeting.\n3. List the **key points discussed**, including important ideas, suggestions, or debates.\n4. Identify any **decisions made** or conclusions reached.\n5. Extract any **action items or tasks**, mentioning:\n   - Who is responsible\n   - What the task is\n   - Deadline (if mentioned)\n6. Mention **any follow-up steps** or next meetings if discussed.\n\nKeep the output clean, professional, and organized. Format it as plain text like this:\n\n---\n\n**Meeting Summary**  \n- [summary point 1]  \n- [summary point 2]  \n...\n\n**Main Topic**  \n[main subject]\n\n**Key Discussion Points**  \n- [point 1]  \n- [point 2]  \n...\n\n**Decisions Made**  \n- [decision 1]  \n- [decision 2]  \n...\n\n**Action Items**  \n- [Person]: [Task] — Due: [date if mentioned]  \n...\n\n**Follow-ups / Next Steps**  \n- [follow-up step or note]\n\n---"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        80,
+        144
+      ],
+      "id": "9084a546-e93a-48c0-a9de-b33defddf16f",
+      "name": "AI Agent",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        80,
+        352
+      ],
+      "id": "3e494625-ea93-4c3e-8f93-099fca93a6ed",
+      "name": "OpenAI Chat Model"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentURL": "https://docs.google.com/document/d/14n-bq_uRNsk6cgq9xInmlDb6ZpSF4ZqfDICBCJLKM3A/edit?usp=sharing",
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "insert",
+              "text": "={{ $json.output }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        464,
+        448
+      ],
+      "id": "397278bb-f967-4d00-bbcc-6a1bcb8fc4e8",
+      "name": "Update a document"
+    },
+    {
+      "parameters": {
+        "sendTo": "hajarmachmoum546@gmail.com",
+        "subject": "Meeting Summary You Missed!",
+        "emailType": "text",
+        "message": "=Find meeting summary at https://docs.google.com/document/d/{{ $json.documentId }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        768,
+        288
+      ],
+      "id": "c98f3383-ceaf-4796-aba8-344be8929e16",
+      "name": "Send a message",
+      "webhookId": "5a907dd4-02e5-47e7-8bdc-49c8fe7b73c9",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "CJXh9Ek21UlLMoPu",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Download file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download file": {
+      "main": [
+        [
+          {
+            "node": "Transcribe a recording",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Transcribe a recording": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Update a document",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update a document": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "versionId": "db73a4c8-bfc7-4331-aba3-ca5f436867ee",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "0774076a3d831eff4e645a8cc9707f491dae7a5a68c607269055f96d05a33e4d"
+  },
+  "id": "WruaSafoJAr0TuJI",
+  "tags": []
+}

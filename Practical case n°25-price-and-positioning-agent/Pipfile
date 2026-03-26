@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+exa-py = "*"
+openai = "*"
+dotenv = "*"
+rich = "*"
+docstring-parser = "*"
+packaging = "*"
+fastapi = "*"
+mistralai = "*"
+pydantic = ">=2.0"
+pydantic-settings = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"

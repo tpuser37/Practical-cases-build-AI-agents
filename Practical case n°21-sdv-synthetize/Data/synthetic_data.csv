@@ -1,0 +1,501 @@
+CustomerID,Churn,Tenure,PreferredLoginDevice,CityTier,WarehouseToHome,PreferredPaymentMode,Gender,HourSpendOnApp,NumberOfDeviceRegistered,PreferedOrderCat,SatisfactionScore,MaritalStatus,NumberOfAddress,Complain,OrderAmountHikeFromlastYear,CouponUsed,OrderCount,DaySinceLastOrder,CashbackAmount
+10734693,1,8.0,Computer,Elijahbury,10.0,Debit Card,Male,3.0,5,Mobile,2,Divorced,6,0,12.0,1.0,4.0,6.0,153
+3546599,0,0.0,Phone,West Bryan,,Credit Card,Male,3.0,3,Laptop & Accessory,3,Single,6,0,17.0,1.0,1.0,1.0,111
+8335027,0,9.0,Mobile Phone,Michaelburgh,7.0,Credit Card,Male,2.0,3,Laptop & Accessory,4,Single,5,0,14.0,1.0,1.0,0.0,214
+6028771,0,0.0,Computer,Benjaminstad,7.0,E wallet,Male,2.0,4,Others,2,Single,12,1,13.0,,1.0,6.0,137
+5844949,0,30.0,Mobile Phone,Barnesport,8.0,Credit Card,Female,2.0,3,Laptop & Accessory,4,Divorced,2,1,13.0,0.0,1.0,8.0,166
+8828426,0,2.0,Computer,West Rachel,18.0,Credit Card,Male,2.0,3,Mobile,2,Single,6,0,18.0,1.0,6.0,2.0,152
+4650151,0,18.0,Computer,Port Deborah,9.0,Credit Card,Female,2.0,4,Mobile,2,Married,7,1,15.0,1.0,1.0,7.0,136
+9727611,0,14.0,Mobile Phone,Bookerbury,16.0,Credit Card,Female,2.0,3,Fashion,5,Divorced,3,1,17.0,0.0,2.0,2.0,241
+2179414,1,12.0,Computer,Huffmanberg,19.0,Credit Card,Female,2.0,5,Laptop & Accessory,3,Single,5,0,23.0,0.0,3.0,0.0,210
+3358217,0,0.0,Phone,Harrisbury,35.0,E wallet,Female,2.0,3,Laptop & Accessory,2,Divorced,7,1,13.0,0.0,1.0,9.0,143
+3139501,0,0.0,Computer,New David,12.0,Debit Card,Female,3.0,4,Mobile,3,Single,2,1,,1.0,1.0,0.0,209
+11872386,0,0.0,Phone,New Michael,35.0,Credit Card,Female,3.0,3,Others,5,Divorced,3,0,11.0,1.0,1.0,2.0,200
+16312324,0,0.0,Computer,New Charles,6.0,Credit Card,Male,2.0,4,Others,5,Single,6,0,17.0,0.0,1.0,0.0,216
+13573606,0,0.0,Phone,Michaelville,18.0,Debit Card,Male,2.0,3,Laptop & Accessory,4,Married,7,1,24.0,1.0,1.0,,118
+2692209,0,20.0,Phone,New Michellemouth,8.0,Debit Card,Female,2.0,3,Mobile Phone,5,Divorced,5,0,25.0,1.0,3.0,0.0,238
+8690442,0,10.0,Computer,Riceburgh,14.0,Credit Card,Male,3.0,3,Mobile,3,Divorced,3,1,13.0,1.0,1.0,,218
+3538017,0,0.0,Phone,Johnsonview,11.0,Credit Card,Male,2.0,3,Laptop & Accessory,2,Single,2,0,25.0,0.0,1.0,3.0,193
+9316679,0,0.0,Mobile Phone,Anthonyburgh,19.0,UPI,Male,2.0,2,Mobile,3,Single,3,0,13.0,1.0,4.0,7.0,158
+2010532,0,11.0,Mobile Phone,Martinezland,33.0,E wallet,Male,2.0,2,Mobile Phone,2,Single,3,0,15.0,0.0,1.0,2.0,170
+7218778,0,0.0,Computer,Hodgefurt,17.0,Debit Card,Male,2.0,4,Laptop & Accessory,3,Divorced,2,1,18.0,1.0,1.0,3.0,119
+6932194,0,,Computer,East Carriemouth,18.0,E wallet,Female,2.0,4,Mobile,2,Single,3,0,14.0,0.0,2.0,5.0,177
+4704626,0,,Phone,Port Thomasville,12.0,Credit Card,Male,3.0,2,Mobile,3,Divorced,7,0,14.0,1.0,1.0,8.0,179
+12361431,0,23.0,Mobile Phone,South Jessicahaven,,Debit Card,Male,,4,Fashion,5,Divorced,2,1,18.0,0.0,1.0,0.0,141
+9786572,0,0.0,Mobile Phone,Pricestad,14.0,CC,Female,3.0,5,Laptop & Accessory,4,Single,5,0,18.0,0.0,1.0,5.0,217
+3951345,1,14.0,Phone,Lucerohaven,19.0,Debit Card,Female,2.0,4,Grocery,2,Single,3,0,22.0,1.0,2.0,,171
+9478281,0,3.0,Computer,Floresburgh,12.0,Credit Card,Female,3.0,5,Laptop & Accessory,5,Divorced,3,1,14.0,0.0,1.0,6.0,136
+4258837,0,,Mobile Phone,South Shaunside,16.0,Credit Card,Male,,2,Fashion,3,Single,2,0,19.0,0.0,10.0,2.0,157
+16211814,0,0.0,Mobile Phone,Lake Connor,18.0,Credit Card,Male,3.0,3,Mobile Phone,2,Single,2,0,13.0,1.0,1.0,,148
+1841419,0,,Mobile Phone,East Lorrainehaven,35.0,Credit Card,Male,3.0,3,Others,5,Married,5,0,15.0,1.0,1.0,2.0,159
+9281303,0,0.0,Mobile Phone,West Brandonland,14.0,Debit Card,Male,2.0,1,Laptop & Accessory,5,Divorced,2,0,17.0,1.0,1.0,1.0,139
+11805603,0,0.0,Computer,Lake Terri,13.0,Credit Card,Female,2.0,3,Fashion,3,Divorced,3,0,16.0,1.0,1.0,0.0,191
+8373086,0,2.0,Computer,New Kristin,,E wallet,Male,2.0,3,Laptop & Accessory,4,Single,7,0,14.0,1.0,1.0,1.0,151
+8145337,0,2.0,Computer,Tinaside,5.0,CC,Male,3.0,4,Mobile,3,Divorced,6,0,18.0,1.0,1.0,0.0,168
+3533455,1,0.0,Computer,Delacruzside,23.0,Credit Card,Male,2.0,3,Mobile,3,Single,2,0,16.0,1.0,1.0,8.0,197
+7747828,1,,Phone,East Robertaborough,7.0,Credit Card,Male,2.0,2,Laptop & Accessory,3,Divorced,2,0,12.0,0.0,1.0,2.0,193
+13789660,0,,Computer,West Brendachester,24.0,Credit Card,Female,2.0,3,Laptop & Accessory,3,Married,14,0,19.0,1.0,1.0,2.0,296
+735375,0,0.0,Computer,Williamsmouth,29.0,UPI,Male,,5,Grocery,3,Single,1,1,18.0,0.0,1.0,,156
+15227687,0,7.0,Computer,South Erin,14.0,Debit Card,Male,2.0,2,Laptop & Accessory,4,Married,3,1,16.0,1.0,1.0,3.0,162
+3455738,0,9.0,Phone,Starkmouth,8.0,Credit Card,Female,2.0,4,Mobile,5,Married,2,0,17.0,3.0,6.0,5.0,218
+719628,0,3.0,Mobile Phone,Frankhaven,12.0,COD,Male,2.0,3,Laptop & Accessory,4,Single,3,0,19.0,1.0,1.0,1.0,197
+16097677,0,6.0,Computer,New Jeffrey,5.0,E wallet,Male,3.0,5,Mobile Phone,3,Single,11,0,14.0,1.0,10.0,1.0,112
+3317102,1,0.0,Computer,Wilkinsfurt,7.0,CC,Female,3.0,2,Mobile Phone,2,Single,1,1,25.0,0.0,1.0,0.0,271
+15225604,0,,Phone,East Mark,5.0,Debit Card,Female,2.0,3,Fashion,4,Divorced,2,0,15.0,1.0,1.0,6.0,148
+11047838,0,0.0,Mobile Phone,Edwinport,20.0,CC,Male,2.0,3,Fashion,5,Divorced,5,0,13.0,0.0,1.0,5.0,146
+4417471,0,11.0,Computer,Andrehaven,5.0,Debit Card,Male,2.0,3,Fashion,4,Married,4,1,24.0,0.0,1.0,0.0,127
+16265212,0,7.0,Phone,Lake Julie,35.0,E wallet,Male,3.0,5,Laptop & Accessory,2,Single,11,0,19.0,1.0,1.0,0.0,161
+5649750,0,6.0,Mobile Phone,West Jonathan,13.0,Debit Card,Female,3.0,4,Laptop & Accessory,2,Single,5,0,15.0,1.0,2.0,2.0,127
+5087902,1,0.0,Computer,Kennethview,8.0,CC,Male,,3,Laptop & Accessory,5,Divorced,5,0,14.0,1.0,1.0,1.0,182
+14515496,0,9.0,Mobile Phone,West Nancy,,E wallet,Female,,3,Laptop & Accessory,2,Single,5,1,20.0,1.0,1.0,2.0,297
+10047466,0,0.0,Mobile Phone,Port Elijah,8.0,UPI,Male,3.0,3,Laptop & Accessory,3,Single,6,0,21.0,1.0,11.0,1.0,197
+14375082,0,0.0,Computer,North Kimberlyfurt,7.0,COD,Male,2.0,2,Mobile Phone,5,Single,3,1,15.0,1.0,1.0,5.0,155
+4932911,0,0.0,Mobile Phone,West Christinaburgh,6.0,Credit Card,Female,3.0,5,Others,4,Single,3,1,13.0,1.0,1.0,1.0,300
+4409540,0,14.0,Phone,South Patricia,10.0,Credit Card,Male,2.0,3,Others,5,Married,2,1,15.0,1.0,1.0,1.0,126
+5466741,0,6.0,Computer,North Marvinhaven,6.0,E wallet,Male,3.0,3,Mobile,5,Single,4,0,25.0,1.0,1.0,3.0,159
+10945928,0,12.0,Mobile Phone,Tonyaberg,,E wallet,Male,,3,Laptop & Accessory,3,Married,3,0,14.0,0.0,1.0,0.0,160
+1196720,1,0.0,Computer,Flynntown,11.0,Credit Card,Male,3.0,3,Fashion,5,Single,9,0,11.0,1.0,10.0,0.0,144
+16423131,0,3.0,Phone,Kristinatown,,Debit Card,Male,3.0,2,Others,3,Single,2,1,18.0,0.0,1.0,1.0,186
+4318469,0,5.0,Computer,Ibarraland,11.0,UPI,Male,3.0,2,Mobile,2,Divorced,3,0,25.0,0.0,1.0,0.0,221
+11354200,0,5.0,Phone,New Melissa,15.0,Credit Card,Female,3.0,3,Mobile,2,Divorced,6,0,22.0,1.0,1.0,0.0,250
+941332,0,,Computer,Lake Bryanton,8.0,Debit Card,Male,2.0,3,Mobile,2,Divorced,4,0,14.0,0.0,14.0,0.0,215
+2258080,0,19.0,Phone,South Cody,11.0,Credit Card,Male,3.0,3,Laptop & Accessory,5,Single,2,0,15.0,0.0,1.0,0.0,284
+15525894,0,16.0,Phone,Jacksontown,14.0,E wallet,Male,2.0,4,Laptop & Accessory,4,Divorced,1,1,12.0,0.0,14.0,0.0,129
+11256436,0,,Phone,Alexanderberg,5.0,Debit Card,Male,2.0,3,Mobile,3,Divorced,1,0,13.0,1.0,1.0,5.0,193
+12297250,0,12.0,Phone,Nicholastown,35.0,CC,Male,3.0,3,Mobile Phone,3,Married,3,1,25.0,0.0,1.0,0.0,213
+9268335,0,0.0,Mobile Phone,Robertfort,11.0,CC,Male,3.0,2,Mobile Phone,2,Single,3,0,25.0,1.0,,3.0,182
+1953916,0,,Computer,West Matthewland,6.0,E wallet,Female,2.0,3,Laptop & Accessory,5,Single,1,0,13.0,1.0,1.0,7.0,130
+15968239,1,24.0,Phone,Huffmanside,7.0,Debit Card,Male,3.0,4,Laptop & Accessory,5,Divorced,6,1,17.0,0.0,3.0,5.0,146
+2621592,1,0.0,Phone,South Richard,16.0,Credit Card,Female,3.0,4,Laptop & Accessory,5,Single,5,1,12.0,0.0,15.0,3.0,157
+15669949,0,,Mobile Phone,North Jermaine,25.0,Debit Card,Male,2.0,3,Laptop & Accessory,2,Married,3,0,12.0,3.0,1.0,0.0,123
+13915270,0,1.0,Phone,Martintown,8.0,Debit Card,Female,,4,Grocery,4,Divorced,3,1,23.0,0.0,1.0,0.0,235
+3793511,0,7.0,Mobile Phone,West John,23.0,Credit Card,Male,3.0,4,Mobile,3,Single,9,1,25.0,0.0,3.0,,128
+10205358,0,1.0,Phone,South Ginamouth,6.0,Debit Card,Female,3.0,1,Mobile,3,Divorced,1,1,20.0,1.0,6.0,0.0,125
+7442015,0,0.0,Computer,Nicholashaven,8.0,E wallet,Male,3.0,4,Mobile,2,Single,8,0,15.0,0.0,1.0,7.0,142
+13106339,0,,Mobile Phone,Andrewton,21.0,Debit Card,Male,3.0,3,Mobile,2,Single,3,1,12.0,1.0,1.0,7.0,177
+8289563,0,0.0,Mobile Phone,Port Jasonchester,12.0,E wallet,Female,2.0,3,Laptop & Accessory,2,Single,4,0,12.0,,1.0,1.0,181
+12567371,0,12.0,Mobile Phone,Cathyburgh,13.0,UPI,Male,2.0,4,Laptop & Accessory,2,Divorced,1,1,13.0,1.0,,2.0,149
+10439027,0,,Phone,East Marcia,9.0,CC,Male,2.0,3,Mobile,3,Married,1,0,11.0,0.0,1.0,0.0,177
+15436418,0,24.0,Phone,Howardburgh,15.0,Credit Card,Female,2.0,1,Laptop & Accessory,5,Divorced,7,1,22.0,,1.0,2.0,160
+13758683,0,1.0,Computer,North Randytown,5.0,Debit Card,Female,3.0,3,Laptop & Accessory,5,Divorced,6,0,18.0,0.0,1.0,0.0,138
+9592330,0,0.0,Phone,East Stephenmouth,8.0,Credit Card,Female,3.0,3,Laptop & Accessory,3,Divorced,8,0,12.0,0.0,1.0,0.0,128
+5278779,0,4.0,Mobile Phone,South Kevin,29.0,Credit Card,Male,3.0,4,Laptop & Accessory,2,Single,4,1,13.0,1.0,1.0,2.0,120
+13491227,0,1.0,Computer,Wiseshire,6.0,Credit Card,Male,3.0,3,Laptop & Accessory,5,Divorced,1,0,19.0,0.0,1.0,0.0,257
+4459452,0,30.0,Computer,Collinsland,19.0,E wallet,Female,3.0,3,Grocery,2,Divorced,5,0,12.0,1.0,11.0,2.0,265
+1784545,0,,Phone,South Mariabury,31.0,Credit Card,Male,,3,Mobile,2,Married,4,0,15.0,1.0,3.0,2.0,160
+11444641,0,3.0,Phone,Clinemouth,10.0,Credit Card,Female,2.0,3,Laptop & Accessory,5,Married,5,0,16.0,0.0,2.0,1.0,290
+11597115,0,0.0,Phone,Shanemouth,9.0,CC,Female,2.0,3,Laptop & Accessory,3,Single,7,0,19.0,0.0,1.0,2.0,300
+10160368,0,0.0,Phone,Kellyville,6.0,Debit Card,Male,2.0,3,Fashion,2,Married,7,0,14.0,0.0,,2.0,175
+4652327,1,0.0,Mobile Phone,Pughland,7.0,Debit Card,Male,1.0,3,Mobile,5,Married,3,0,15.0,1.0,7.0,10.0,143
+8105616,0,3.0,Mobile Phone,New Matthew,17.0,COD,Male,3.0,3,Laptop & Accessory,4,Single,5,1,12.0,0.0,,7.0,155
+910578,0,0.0,Phone,East Rebecca,20.0,E wallet,Male,,3,Mobile,3,Single,3,0,13.0,0.0,1.0,6.0,235
+3564991,0,,Mobile Phone,Juliestad,29.0,Cash on Delivery,Male,2.0,4,Mobile,2,Single,7,0,14.0,1.0,1.0,9.0,269
+10251463,0,0.0,Computer,West Kimberlyhaven,15.0,Debit Card,Female,3.0,5,Laptop & Accessory,5,Divorced,7,0,,0.0,1.0,2.0,300
+4339534,0,8.0,Computer,Port Kathy,22.0,UPI,Female,,1,Laptop & Accessory,5,Divorced,3,0,19.0,0.0,1.0,0.0,122
+2379904,0,6.0,Computer,Lake Vincentfurt,5.0,Debit Card,Male,,4,Fashion,2,Married,4,1,19.0,1.0,5.0,1.0,300
+2920603,0,10.0,Computer,Jerrystad,9.0,Cash on Delivery,Female,2.0,4,Mobile Phone,3,Married,6,0,15.0,1.0,1.0,1.0,140
+16723374,1,12.0,Computer,Fosterborough,5.0,Credit Card,Male,3.0,5,Fashion,4,Divorced,3,1,12.0,0.0,1.0,2.0,234
+15693051,0,30.0,Computer,Kylebury,12.0,Credit Card,Male,3.0,2,Mobile Phone,5,Single,2,0,15.0,0.0,1.0,1.0,112
+4575333,0,5.0,Mobile Phone,East Larry,5.0,Credit Card,Female,2.0,3,Grocery,4,Single,6,1,14.0,0.0,2.0,0.0,173
+5880970,0,0.0,Phone,New Barbara,9.0,Debit Card,Male,2.0,3,Laptop & Accessory,5,Divorced,1,0,15.0,1.0,12.0,1.0,120
+10815745,0,20.0,Phone,Margaretmouth,10.0,CC,Male,2.0,3,Laptop & Accessory,4,Single,2,0,14.0,0.0,6.0,6.0,163
+7194849,1,0.0,Mobile Phone,Gregorychester,27.0,Credit Card,Male,2.0,3,Others,4,Single,7,0,22.0,0.0,6.0,2.0,219
+13816369,0,0.0,Computer,Lake Robinshire,12.0,E wallet,Female,2.0,5,Laptop & Accessory,2,Married,7,0,18.0,0.0,,3.0,126
+9973540,0,,Computer,East Vanessaville,7.0,E wallet,Male,2.0,4,Laptop & Accessory,2,Single,1,0,16.0,1.0,1.0,1.0,117
+13567236,1,6.0,Computer,New Edwardberg,16.0,UPI,Male,2.0,4,Mobile,2,Married,6,0,25.0,1.0,1.0,4.0,171
+10752561,0,,Phone,Port Linda,10.0,UPI,Female,2.0,3,Mobile,3,Divorced,2,0,14.0,0.0,1.0,12.0,112
+12837954,0,0.0,Phone,Lake Joshua,5.0,E wallet,Male,2.0,3,Mobile,2,Single,5,0,15.0,1.0,1.0,9.0,227
+10558318,0,0.0,Mobile Phone,North Wanda,9.0,Debit Card,Female,1.0,3,Others,4,Divorced,7,1,,0.0,1.0,6.0,147
+81566,1,0.0,Computer,East Jennifer,,UPI,Male,2.0,5,Mobile Phone,4,Married,1,0,15.0,0.0,,0.0,149
+1067363,0,,Mobile Phone,Steelefort,17.0,Credit Card,Female,2.0,1,Laptop & Accessory,2,Divorced,2,1,22.0,1.0,10.0,5.0,135
+11835432,0,6.0,Mobile Phone,Reyesport,9.0,Debit Card,Female,2.0,1,Laptop & Accessory,2,Married,3,0,17.0,,3.0,1.0,165
+4894048,0,11.0,Computer,Brownfurt,8.0,Credit Card,Male,2.0,5,Laptop & Accessory,3,Single,4,0,14.0,0.0,1.0,9.0,135
+6279589,0,0.0,Phone,Schneiderside,,Debit Card,Male,3.0,4,Grocery,4,Single,2,0,25.0,1.0,2.0,0.0,176
+1777778,1,0.0,Phone,Glennmouth,35.0,Debit Card,Female,2.0,3,Mobile Phone,3,Single,6,0,24.0,1.0,1.0,1.0,239
+5718630,1,,Mobile Phone,Port Robertstad,33.0,Debit Card,Male,3.0,3,Fashion,4,Divorced,3,0,24.0,1.0,1.0,0.0,170
+12147543,0,,Computer,Westbury,5.0,UPI,Male,3.0,2,Others,5,Divorced,5,0,24.0,1.0,1.0,1.0,154
+5956752,1,2.0,Mobile Phone,South Debbiemouth,7.0,Debit Card,Female,0.0,4,Mobile,3,Single,5,0,11.0,3.0,1.0,2.0,175
+14942038,1,1.0,Mobile Phone,Rickyburgh,16.0,Debit Card,Male,3.0,3,Mobile,5,Divorced,3,0,13.0,1.0,15.0,5.0,165
+1121282,0,,Phone,Foxshire,17.0,Credit Card,Female,2.0,1,Mobile,2,Divorced,1,0,25.0,0.0,5.0,0.0,131
+15945075,0,0.0,Phone,Romeromouth,35.0,Credit Card,Male,2.0,3,Mobile,4,Married,3,0,14.0,1.0,1.0,1.0,136
+9433431,0,11.0,Mobile Phone,Brandonmouth,,Debit Card,Male,2.0,3,Mobile,3,Divorced,1,0,18.0,1.0,1.0,4.0,142
+16427279,0,,Mobile Phone,East Robert,12.0,Cash on Delivery,Female,1.0,3,Mobile Phone,3,Divorced,3,1,21.0,1.0,13.0,4.0,155
+15703277,0,29.0,Phone,Lake Jennifer,26.0,UPI,Male,3.0,2,Fashion,5,Divorced,1,1,16.0,0.0,1.0,7.0,123
+7078918,0,13.0,Phone,West Kaitlyn,35.0,Credit Card,Male,2.0,4,Laptop & Accessory,2,Divorced,7,0,23.0,3.0,13.0,1.0,244
+10397374,1,1.0,Computer,Lake Carlville,5.0,Credit Card,Male,1.0,3,Mobile,2,Divorced,3,0,13.0,1.0,1.0,6.0,194
+3775178,0,,Mobile Phone,Richardville,5.0,CC,Male,2.0,2,Fashion,2,Single,6,0,25.0,1.0,1.0,5.0,189
+5870884,0,12.0,Computer,New Tammyshire,17.0,Debit Card,Female,2.0,3,Mobile,5,Divorced,2,0,14.0,2.0,1.0,4.0,179
+16226815,0,2.0,Computer,Lake Allison,5.0,Debit Card,Male,,3,Mobile Phone,2,Single,10,0,14.0,0.0,,6.0,192
+14762989,1,17.0,Computer,West Robin,11.0,Debit Card,Male,2.0,3,Laptop & Accessory,3,Married,6,0,23.0,1.0,1.0,9.0,187
+4418243,0,,Phone,Randallmouth,16.0,Cash on Delivery,Male,3.0,3,Mobile Phone,3,Single,7,0,14.0,1.0,1.0,1.0,156
+2773077,0,14.0,Phone,West Maryview,8.0,COD,Female,,3,Laptop & Accessory,3,Single,3,0,16.0,0.0,15.0,3.0,219
+1340357,1,0.0,Computer,Lukebury,26.0,Credit Card,Female,1.0,3,Laptop & Accessory,4,Married,6,0,25.0,0.0,10.0,0.0,120
+12587976,0,14.0,Phone,East Laura,35.0,E wallet,Male,2.0,4,Laptop & Accessory,3,Single,1,0,21.0,1.0,,0.0,147
+3932795,1,1.0,Phone,Port Angela,15.0,Credit Card,Female,3.0,4,Fashion,4,Divorced,4,0,16.0,0.0,4.0,0.0,204
+9296602,0,2.0,Phone,Blackborough,12.0,E wallet,Male,3.0,2,Laptop & Accessory,2,Single,4,0,25.0,1.0,1.0,0.0,161
+3902938,0,0.0,Computer,Lake Robin,10.0,UPI,Male,3.0,4,Fashion,3,Married,2,1,12.0,3.0,1.0,1.0,151
+15972630,0,6.0,Phone,Lake Charles,18.0,E wallet,Male,3.0,3,Mobile,2,Divorced,3,0,13.0,1.0,1.0,0.0,138
+13321383,0,30.0,Mobile Phone,Roberttown,6.0,Debit Card,Male,2.0,3,Laptop & Accessory,4,Divorced,4,0,25.0,1.0,1.0,0.0,158
+200705,0,0.0,Mobile Phone,Lake Alison,5.0,CC,Female,2.0,3,Fashion,5,Divorced,1,1,14.0,0.0,1.0,3.0,190
+13556808,0,0.0,Phone,West Josephshire,17.0,Debit Card,Male,3.0,3,Mobile Phone,3,Married,2,0,11.0,1.0,4.0,3.0,143
+3604611,0,0.0,Computer,Lake Jamesburgh,22.0,Debit Card,Male,2.0,2,Mobile,3,Married,6,0,19.0,1.0,1.0,3.0,150
+770936,0,0.0,Mobile Phone,Michaelport,22.0,Credit Card,Female,2.0,3,Mobile,3,Married,2,0,12.0,7.0,1.0,4.0,184
+706524,1,0.0,Computer,Port Danielle,9.0,Credit Card,Male,,3,Others,2,Single,5,0,13.0,,1.0,0.0,219
+8980536,0,0.0,Mobile Phone,Lake Amandaton,26.0,Credit Card,Female,3.0,4,Grocery,4,Married,5,0,25.0,1.0,1.0,0.0,195
+5459484,0,,Mobile Phone,Blakeshire,5.0,UPI,Male,2.0,4,Grocery,3,Divorced,3,0,25.0,1.0,1.0,1.0,255
+4349895,0,14.0,Mobile Phone,New Melissashire,9.0,E wallet,Female,,2,Laptop & Accessory,4,Divorced,1,0,,1.0,1.0,2.0,183
+10483190,0,11.0,Phone,Lake Keithhaven,12.0,Credit Card,Male,3.0,3,Laptop & Accessory,3,Married,7,0,21.0,,2.0,2.0,147
+5636294,0,0.0,Phone,New Gloria,10.0,Credit Card,Female,2.0,4,Grocery,3,Married,5,1,13.0,0.0,4.0,2.0,139
+11609203,1,,Computer,East Roger,7.0,COD,Female,3.0,3,Laptop & Accessory,5,Married,7,1,16.0,0.0,1.0,2.0,145
+4001040,0,3.0,Phone,Zunigahaven,18.0,UPI,Male,2.0,4,Mobile,3,Divorced,1,0,16.0,1.0,1.0,5.0,159
+10551512,0,13.0,Phone,Lake Kennethview,17.0,Credit Card,Male,2.0,3,Mobile Phone,3,Single,2,0,16.0,,1.0,0.0,158
+14596682,0,10.0,Computer,Lake Bruce,5.0,Debit Card,Female,2.0,3,Others,4,Single,2,1,14.0,1.0,2.0,10.0,249
+189773,0,,Computer,South Andrea,32.0,Debit Card,Female,2.0,3,Mobile,3,Married,7,0,15.0,1.0,1.0,7.0,198
+16223214,0,8.0,Mobile Phone,Johnstonburgh,6.0,Debit Card,Male,2.0,3,Laptop & Accessory,2,Married,2,0,19.0,1.0,1.0,4.0,134
+3962318,0,14.0,Phone,Christophermouth,14.0,Cash on Delivery,Male,2.0,4,Laptop & Accessory,4,Divorced,5,1,16.0,0.0,1.0,0.0,143
+12717260,0,7.0,Mobile Phone,South Jonhaven,19.0,Debit Card,Female,,4,Grocery,5,Single,3,1,13.0,0.0,6.0,3.0,263
+1692770,0,0.0,Computer,Johnsonfurt,10.0,CC,Female,2.0,3,Mobile,3,Single,8,0,17.0,1.0,1.0,2.0,129
+10799975,0,0.0,Computer,Meagantown,10.0,E wallet,Male,3.0,4,Others,2,Single,3,1,13.0,0.0,1.0,6.0,133
+3969735,0,2.0,Phone,West Jennamouth,26.0,Debit Card,Male,2.0,4,Mobile,2,Married,3,0,13.0,0.0,12.0,0.0,185
+16580862,1,7.0,Phone,Tylerberg,35.0,Credit Card,Male,2.0,3,Mobile,2,Divorced,2,1,12.0,1.0,1.0,7.0,191
+3312247,1,0.0,Phone,South Duaneberg,,Debit Card,Male,3.0,3,Mobile,3,Single,2,0,12.0,1.0,2.0,6.0,141
+12247150,0,10.0,Mobile Phone,Chelseaberg,7.0,Credit Card,Male,2.0,3,Laptop & Accessory,3,Divorced,3,1,13.0,1.0,15.0,1.0,160
+16287848,0,18.0,Mobile Phone,Douglasfort,5.0,Credit Card,Female,2.0,3,Laptop & Accessory,3,Married,4,0,17.0,0.0,1.0,2.0,182
+16348648,1,10.0,Computer,Clairefurt,34.0,Debit Card,Male,2.0,3,Laptop & Accessory,2,Married,7,0,25.0,1.0,1.0,0.0,165
+1321291,0,3.0,Phone,West Lindaton,16.0,E wallet,Female,3.0,3,Mobile,5,Divorced,3,1,18.0,0.0,3.0,3.0,143
+1476237,0,5.0,Mobile Phone,Zacharytown,15.0,Debit Card,Female,2.0,3,Laptop & Accessory,5,Divorced,2,1,18.0,1.0,4.0,1.0,123
+15892425,0,10.0,Computer,Lake Richard,18.0,Debit Card,Male,3.0,3,Laptop & Accessory,3,Married,6,0,15.0,0.0,1.0,4.0,172
+9459057,0,8.0,Mobile Phone,East Ashleyberg,,Debit Card,Male,2.0,3,Laptop & Accessory,5,Divorced,9,1,15.0,1.0,1.0,,244
+1569106,0,0.0,Phone,Haneychester,5.0,Debit Card,Male,2.0,3,Laptop & Accessory,2,Divorced,6,0,13.0,0.0,1.0,3.0,176
+1172581,1,8.0,Mobile Phone,Port Jasonstad,12.0,UPI,Male,,2,Mobile,4,Single,2,0,14.0,0.0,13.0,0.0,208
+13215533,0,8.0,Mobile Phone,Brownton,6.0,Debit Card,Male,,3,Mobile,2,Divorced,3,0,25.0,1.0,1.0,1.0,139
+7554357,0,1.0,Computer,Lake Danielview,11.0,Credit Card,Male,2.0,2,Laptop & Accessory,2,Divorced,2,1,24.0,1.0,1.0,1.0,144
+11780402,0,10.0,Mobile Phone,Nicoletown,35.0,Debit Card,Female,3.0,4,Mobile,2,Single,7,0,17.0,0.0,1.0,7.0,122
+2309418,0,0.0,Mobile Phone,Port Juanmouth,11.0,E wallet,Female,2.0,3,Laptop & Accessory,2,Divorced,2,0,12.0,1.0,1.0,2.0,142
+966648,0,1.0,Phone,Port Faith,18.0,Debit Card,Male,2.0,3,Others,4,Single,2,1,13.0,1.0,1.0,5.0,133
+14844554,0,1.0,Computer,Barajasside,5.0,Debit Card,Female,2.0,3,Mobile,3,Married,5,0,20.0,,7.0,6.0,134
+15935444,0,7.0,Mobile Phone,New William,7.0,CC,Female,3.0,2,Laptop & Accessory,2,Married,2,1,,0.0,1.0,1.0,126
+9639808,0,11.0,Computer,East Kimberlyland,14.0,UPI,Female,3.0,4,Fashion,2,Divorced,6,0,13.0,0.0,4.0,2.0,257
+15033267,0,2.0,Computer,Alexandermouth,12.0,Credit Card,Male,2.0,3,Fashion,5,Divorced,5,0,11.0,0.0,1.0,2.0,137
+6830585,0,1.0,Phone,Sanderstown,,UPI,Male,3.0,4,Laptop & Accessory,5,Married,6,0,18.0,7.0,1.0,7.0,149
+5415197,0,0.0,Mobile Phone,Port Alexandermouth,10.0,Credit Card,Female,2.0,3,Laptop & Accessory,5,Single,7,0,25.0,0.0,1.0,2.0,158
+14958239,0,9.0,Phone,Rodriguezhaven,12.0,E wallet,Male,2.0,5,Laptop & Accessory,5,Single,11,1,19.0,1.0,1.0,6.0,145
+1416969,1,2.0,Computer,Gregorymouth,16.0,CC,Male,3.0,3,Mobile,5,Divorced,3,0,19.0,0.0,1.0,0.0,220
+11225549,1,3.0,Mobile Phone,South Keith,5.0,CC,Female,3.0,3,Others,4,Divorced,6,1,25.0,1.0,1.0,5.0,222
+7583100,1,0.0,Mobile Phone,West David,35.0,UPI,Male,3.0,3,Mobile,2,Divorced,3,0,12.0,0.0,2.0,0.0,184
+5151319,0,2.0,Computer,Petershire,35.0,Credit Card,Male,3.0,3,Mobile,3,Married,1,0,16.0,1.0,1.0,1.0,176
+15118738,1,9.0,Computer,East Thomasmouth,35.0,Credit Card,Female,,4,Laptop & Accessory,3,Divorced,3,0,15.0,0.0,15.0,7.0,136
+10804564,0,0.0,Computer,New Heathermouth,28.0,Debit Card,Male,2.0,4,Mobile Phone,2,Married,8,0,15.0,1.0,1.0,0.0,165
+11640464,0,2.0,Mobile Phone,Lake Shannon,,Debit Card,Female,2.0,3,Laptop & Accessory,3,Single,2,1,,1.0,1.0,0.0,175
+5174241,1,17.0,Phone,Port Lisaside,5.0,Credit Card,Female,2.0,1,Laptop & Accessory,3,Divorced,3,0,19.0,1.0,2.0,1.0,210
+3875450,1,5.0,Mobile Phone,Lake Aaronfurt,18.0,CC,Male,2.0,4,Mobile Phone,2,Single,2,1,24.0,0.0,4.0,1.0,148
+6431162,0,8.0,Mobile Phone,Ellisshire,25.0,COD,Male,3.0,3,Grocery,5,Single,2,0,25.0,0.0,1.0,3.0,283
+10787738,0,2.0,Mobile Phone,Port Kathyborough,5.0,Debit Card,Male,2.0,4,Fashion,2,Divorced,7,0,12.0,0.0,1.0,6.0,226
+2964862,0,,Mobile Phone,East Nathaniel,,Debit Card,Male,2.0,3,Laptop & Accessory,2,Divorced,7,0,19.0,1.0,1.0,0.0,176
+3996040,1,0.0,Mobile Phone,Andreaberg,12.0,E wallet,Female,3.0,4,Mobile,5,Single,2,1,15.0,1.0,1.0,3.0,193
+12108856,1,0.0,Mobile Phone,South Dalehaven,7.0,E wallet,Male,2.0,3,Mobile Phone,5,Single,2,1,24.0,1.0,2.0,7.0,167
+6009032,0,30.0,Mobile Phone,New Brittanybury,7.0,Debit Card,Male,3.0,3,Fashion,2,Married,2,0,,1.0,1.0,0.0,136
+7260797,0,7.0,Computer,East Markbury,18.0,COD,Female,2.0,3,Grocery,5,Divorced,2,1,19.0,1.0,1.0,2.0,143
+11124863,0,0.0,Phone,New Sarah,12.0,Debit Card,Male,3.0,4,Mobile,2,Divorced,2,1,16.0,1.0,,1.0,156
+2125932,0,,Computer,Coryshire,16.0,Credit Card,Female,2.0,3,Mobile Phone,2,Divorced,6,1,15.0,1.0,2.0,5.0,176
+3278655,1,0.0,Mobile Phone,Stephenbury,,Debit Card,Male,3.0,3,Laptop & Accessory,2,Single,7,0,15.0,1.0,2.0,2.0,134
+16656210,0,6.0,Phone,South Victorberg,7.0,Debit Card,Male,2.0,3,Laptop & Accessory,4,Married,3,0,23.0,0.0,4.0,,178
+3756903,0,14.0,Mobile Phone,Stacyshire,14.0,Debit Card,Female,2.0,4,Mobile,4,Divorced,1,0,15.0,1.0,3.0,1.0,178
+651444,0,6.0,Phone,Hayesshire,12.0,Debit Card,Female,2.0,4,Mobile,3,Single,6,0,19.0,0.0,14.0,7.0,175
+1686476,0,10.0,Mobile Phone,Wellsland,16.0,Debit Card,Female,2.0,4,Laptop & Accessory,3,Single,2,1,21.0,0.0,1.0,0.0,137
+7258208,0,4.0,Computer,New Samantha,6.0,Credit Card,Female,3.0,3,Laptop & Accessory,2,Divorced,3,1,25.0,0.0,1.0,8.0,209
+6702500,0,1.0,Computer,Phillipton,35.0,COD,Female,3.0,3,Mobile,4,Single,3,1,15.0,0.0,1.0,10.0,176
+11068173,0,,Computer,Robertborough,10.0,Debit Card,Female,3.0,3,Fashion,2,Single,1,0,25.0,1.0,1.0,1.0,134
+14855680,1,9.0,Computer,Cherylstad,11.0,Cash on Delivery,Female,3.0,5,Laptop & Accessory,3,Single,6,0,,1.0,1.0,3.0,240
+11509517,1,0.0,Phone,Christinefort,12.0,CC,Male,3.0,1,Fashion,4,Divorced,2,0,16.0,0.0,2.0,1.0,130
+37401,0,0.0,Phone,Lopezport,6.0,CC,Male,3.0,2,Laptop & Accessory,3,Single,2,1,20.0,0.0,1.0,6.0,155
+15653255,0,1.0,Mobile Phone,Kristaville,27.0,Credit Card,Female,3.0,3,Laptop & Accessory,4,Single,7,1,18.0,1.0,2.0,3.0,264
+438456,0,8.0,Mobile Phone,North Phillip,15.0,E wallet,Male,3.0,3,Laptop & Accessory,2,Single,11,0,15.0,0.0,5.0,6.0,148
+8075230,1,0.0,Mobile Phone,Mckinneymouth,,E wallet,Female,1.0,3,Mobile Phone,3,Single,5,1,13.0,0.0,7.0,5.0,218
+8219893,0,3.0,Mobile Phone,Palmerland,35.0,COD,Female,1.0,4,Mobile,4,Single,2,0,24.0,1.0,1.0,10.0,299
+15311215,0,1.0,Phone,Quinnborough,8.0,Debit Card,Male,,3,Laptop & Accessory,3,Divorced,2,0,13.0,0.0,1.0,2.0,251
+7211646,0,5.0,Computer,Maryville,33.0,Credit Card,Female,3.0,4,Mobile,2,Married,2,1,17.0,1.0,2.0,,148
+15016282,0,0.0,Phone,Andrewville,35.0,Debit Card,Female,3.0,5,Grocery,2,Single,5,0,12.0,0.0,2.0,1.0,120
+6556919,1,0.0,Phone,West Katherineside,14.0,CC,Male,2.0,3,Laptop & Accessory,2,Married,4,0,17.0,0.0,1.0,1.0,160
+15526122,0,10.0,Phone,New Lawrenceton,9.0,CC,Female,2.0,3,Fashion,5,Single,1,1,19.0,1.0,,0.0,140
+10312898,0,3.0,Phone,New Mistyshire,,Credit Card,Female,,3,Grocery,2,Divorced,2,0,25.0,0.0,1.0,,150
+11717057,0,17.0,Computer,Williemouth,18.0,Credit Card,Female,,4,Mobile,2,Single,2,0,14.0,1.0,1.0,3.0,164
+5485430,1,8.0,Computer,Lake Brettport,14.0,Credit Card,Male,2.0,4,Mobile,5,Divorced,2,1,20.0,1.0,2.0,5.0,123
+7221963,1,0.0,Computer,Anthonyland,24.0,Debit Card,Female,3.0,4,Laptop & Accessory,2,Divorced,6,0,13.0,0.0,1.0,2.0,199
+2990522,0,0.0,Mobile Phone,Lake Bethtown,11.0,UPI,Male,,5,Laptop & Accessory,4,Single,7,1,15.0,0.0,8.0,4.0,161
+13510184,1,,Phone,New Ernestton,5.0,UPI,Male,3.0,3,Laptop & Accessory,2,Divorced,2,0,23.0,0.0,1.0,2.0,140
+4607939,0,10.0,Mobile Phone,East Zachary,5.0,Debit Card,Male,3.0,3,Laptop & Accessory,2,Divorced,5,1,21.0,0.0,8.0,6.0,154
+7762810,0,12.0,Computer,Brownbury,9.0,Credit Card,Male,3.0,4,Mobile Phone,2,Divorced,7,0,20.0,0.0,15.0,1.0,221
+6411882,1,0.0,Phone,New Margaret,15.0,Debit Card,Female,2.0,3,Fashion,3,Single,6,1,18.0,,5.0,0.0,188
+570001,0,13.0,Phone,Morenoview,6.0,Debit Card,Male,3.0,2,Laptop & Accessory,3,Married,7,0,12.0,1.0,1.0,2.0,259
+11260207,0,12.0,Computer,Blackfurt,25.0,UPI,Male,3.0,2,Mobile,2,Married,4,1,25.0,,1.0,0.0,164
+10472446,0,7.0,Phone,South Jamiestad,6.0,CC,Female,3.0,4,Laptop & Accessory,2,Single,3,0,18.0,,1.0,2.0,122
+16469472,0,17.0,Mobile Phone,Terryfort,6.0,Debit Card,Female,2.0,3,Mobile,5,Single,6,0,18.0,3.0,1.0,1.0,144
+3123696,0,,Phone,Scottfurt,14.0,CC,Female,2.0,3,Laptop & Accessory,2,Married,8,0,17.0,3.0,1.0,0.0,127
+16136285,0,,Phone,Brianville,18.0,Debit Card,Male,2.0,3,Mobile Phone,5,Single,7,0,13.0,0.0,1.0,1.0,194
+2125086,0,,Mobile Phone,Vargasborough,5.0,CC,Male,3.0,3,Mobile,2,Divorced,2,1,17.0,1.0,4.0,0.0,178
+3684702,0,21.0,Computer,West Christine,35.0,Debit Card,Female,3.0,3,Laptop & Accessory,5,Single,7,1,24.0,1.0,2.0,1.0,155
+8790599,0,16.0,Mobile Phone,Erikaview,19.0,CC,Male,2.0,3,Mobile Phone,4,Single,2,1,14.0,3.0,1.0,2.0,153
+15971107,0,11.0,Phone,Smithmouth,9.0,UPI,Female,3.0,5,Laptop & Accessory,2,Single,8,0,20.0,1.0,4.0,4.0,195
+10691190,0,2.0,Phone,Anntown,5.0,Cash on Delivery,Male,3.0,3,Laptop & Accessory,4,Married,2,0,24.0,1.0,1.0,1.0,130
+8221312,0,10.0,Computer,Port Sheilaland,13.0,Credit Card,Female,,3,Mobile,3,Divorced,5,1,17.0,1.0,1.0,0.0,151
+15265747,0,4.0,Computer,Wendyport,35.0,E wallet,Female,,2,Others,3,Single,4,0,19.0,1.0,1.0,0.0,300
+9616586,0,10.0,Phone,Smithshire,26.0,E wallet,Female,3.0,3,Mobile,5,Divorced,2,0,17.0,1.0,13.0,8.0,196
+11511123,0,,Phone,Meaganfurt,,CC,Female,3.0,3,Mobile Phone,3,Divorced,10,0,13.0,1.0,1.0,0.0,192
+15948496,0,3.0,Phone,South Amandaview,27.0,Credit Card,Female,2.0,3,Mobile,3,Married,3,0,13.0,0.0,15.0,5.0,186
+15018057,1,0.0,Phone,Mosesview,5.0,Debit Card,Female,2.0,4,Mobile,4,Single,8,1,18.0,1.0,1.0,4.0,208
+8945258,1,3.0,Mobile Phone,East Ginastad,12.0,Credit Card,Female,,3,Mobile,2,Single,3,0,16.0,0.0,13.0,0.0,137
+1251818,0,0.0,Phone,Lindatown,9.0,Debit Card,Female,2.0,5,Mobile Phone,2,Single,1,0,20.0,1.0,3.0,2.0,144
+16074860,1,2.0,Phone,Harrisport,15.0,CC,Female,3.0,3,Mobile,2,Single,2,0,17.0,0.0,1.0,0.0,136
+11546068,0,4.0,Mobile Phone,Medinaland,12.0,Credit Card,Female,3.0,4,Laptop & Accessory,2,Single,3,0,,,1.0,3.0,206
+2860038,0,14.0,Phone,Stacymouth,,Credit Card,Male,1.0,3,Fashion,5,Single,7,0,15.0,0.0,1.0,0.0,185
+6934198,1,2.0,Mobile Phone,Deborahshire,34.0,Credit Card,Female,2.0,3,Grocery,5,Divorced,9,0,14.0,1.0,1.0,12.0,167
+14129840,0,16.0,Computer,Jessicachester,16.0,E wallet,Female,,3,Mobile,3,Divorced,4,0,18.0,1.0,2.0,1.0,161
+16583046,0,2.0,Phone,Christopherborough,8.0,Credit Card,Male,2.0,3,Laptop & Accessory,3,Single,3,0,15.0,5.0,2.0,4.0,134
+14873307,0,,Mobile Phone,North Kevin,14.0,E wallet,Female,2.0,3,Mobile,2,Single,1,1,16.0,,1.0,6.0,123
+306799,1,0.0,Mobile Phone,Mcguiremouth,26.0,Credit Card,Male,2.0,3,Mobile,3,Divorced,3,1,25.0,0.0,3.0,0.0,194
+15736742,1,0.0,Computer,Meghanton,9.0,CC,Female,2.0,3,Laptop & Accessory,5,Single,6,0,19.0,0.0,4.0,6.0,214
+1360564,0,5.0,Mobile Phone,East Mike,14.0,Debit Card,Male,3.0,4,Fashion,2,Married,3,0,19.0,0.0,1.0,2.0,148
+984544,0,1.0,Mobile Phone,Travisburgh,11.0,Debit Card,Female,2.0,4,Others,3,Single,5,1,15.0,1.0,1.0,0.0,267
+13015930,0,0.0,Phone,West Jeremiah,34.0,Debit Card,Male,3.0,3,Mobile,2,Single,4,0,16.0,,15.0,6.0,211
+5474825,0,4.0,Computer,East Kathrynberg,26.0,COD,Male,2.0,2,Fashion,3,Divorced,4,1,11.0,1.0,1.0,0.0,197
+5038201,0,0.0,Mobile Phone,Normanshire,,CC,Male,3.0,2,Mobile,3,Single,2,1,18.0,0.0,1.0,0.0,116
+15948723,1,8.0,Phone,Mooremouth,5.0,Credit Card,Male,3.0,4,Mobile Phone,4,Married,3,1,18.0,1.0,1.0,0.0,252
+2755121,0,,Computer,Dixontown,17.0,Credit Card,Female,,4,Fashion,4,Single,3,1,11.0,1.0,1.0,0.0,179
+501872,1,24.0,Computer,Port Jenniferside,18.0,Debit Card,Female,3.0,3,Mobile,5,Single,1,0,18.0,1.0,2.0,8.0,242
+1639986,0,24.0,Computer,East Nicole,5.0,Debit Card,Male,2.0,3,Laptop & Accessory,3,Divorced,7,0,14.0,0.0,1.0,,160
+8148931,0,6.0,Phone,Bishopton,19.0,Debit Card,Male,3.0,3,Laptop & Accessory,4,Single,3,0,,0.0,1.0,3.0,207
+11105858,0,,Computer,West Laurenville,15.0,Credit Card,Male,2.0,4,Fashion,5,Single,7,0,16.0,0.0,1.0,2.0,261
+2459980,0,,Computer,East Elizabethfurt,13.0,E wallet,Female,2.0,5,Grocery,3,Divorced,2,0,12.0,0.0,1.0,1.0,132
+11898765,0,4.0,Phone,Lake Jason,,Debit Card,Male,2.0,3,Mobile,3,Single,2,1,14.0,1.0,1.0,9.0,184
+3404214,1,8.0,Mobile Phone,Perezton,14.0,Debit Card,Male,2.0,3,Fashion,2,Single,2,1,,0.0,1.0,0.0,300
+10963535,0,0.0,Mobile Phone,New Erica,11.0,Credit Card,Female,2.0,3,Laptop & Accessory,4,Divorced,2,0,13.0,0.0,1.0,3.0,187
+15639084,0,11.0,Mobile Phone,Lake Christopher,13.0,Debit Card,Female,2.0,3,Mobile Phone,3,Divorced,1,1,25.0,1.0,1.0,6.0,191
+12879041,0,0.0,Phone,North Dana,5.0,Debit Card,Female,3.0,4,Laptop & Accessory,5,Divorced,12,0,23.0,1.0,1.0,3.0,118
+8711397,0,5.0,Computer,Port Amanda,,Credit Card,Male,3.0,4,Laptop & Accessory,3,Divorced,5,0,15.0,3.0,1.0,2.0,127
+7805684,0,0.0,Phone,Loganshire,35.0,E wallet,Male,,4,Others,5,Divorced,4,1,23.0,1.0,1.0,8.0,146
+15263806,0,9.0,Phone,Bennettberg,,Credit Card,Male,2.0,3,Mobile,5,Single,12,0,25.0,1.0,5.0,0.0,138
+16244952,0,0.0,Computer,Meganport,7.0,COD,Male,3.0,3,Laptop & Accessory,2,Divorced,5,1,14.0,1.0,1.0,0.0,168
+16363240,0,,Mobile Phone,Port Elizabethfort,10.0,Credit Card,Female,3.0,4,Fashion,3,Divorced,6,0,16.0,1.0,1.0,6.0,164
+7465295,0,4.0,Computer,Markview,11.0,Debit Card,Female,2.0,3,Mobile,4,Single,2,0,13.0,1.0,2.0,4.0,159
+15333584,0,2.0,Computer,Willietown,11.0,Credit Card,Female,2.0,3,Mobile Phone,5,Single,2,1,13.0,,1.0,5.0,154
+16320120,0,0.0,Phone,New Davidview,13.0,Debit Card,Male,3.0,5,Mobile Phone,2,Divorced,5,0,14.0,0.0,2.0,2.0,233
+13513580,0,0.0,Computer,Reginaside,9.0,Debit Card,Male,3.0,3,Mobile,3,Divorced,3,0,25.0,1.0,1.0,3.0,198
+6963836,1,8.0,Computer,East Lindsay,5.0,CC,Female,2.0,4,Grocery,3,Single,11,0,18.0,1.0,1.0,5.0,97
+594951,1,,Phone,East Marissatown,17.0,CC,Male,2.0,4,Mobile,3,Divorced,5,0,16.0,2.0,1.0,1.0,153
+599041,0,0.0,Mobile Phone,Colemanburgh,9.0,Debit Card,Male,3.0,3,Fashion,5,Married,3,1,12.0,0.0,1.0,1.0,231
+7165409,0,11.0,Computer,Sherrymouth,11.0,Debit Card,Female,2.0,5,Grocery,2,Divorced,2,0,16.0,0.0,1.0,2.0,198
+3311465,1,4.0,Computer,Rhondaside,11.0,E wallet,Female,2.0,3,Laptop & Accessory,2,Single,1,0,19.0,1.0,1.0,10.0,114
+8126614,0,,Phone,West Emily,5.0,UPI,Male,2.0,4,Fashion,2,Divorced,5,0,18.0,1.0,1.0,3.0,147
+765125,0,0.0,Mobile Phone,North Russellfort,35.0,CC,Male,3.0,3,Mobile,5,Married,7,0,20.0,0.0,1.0,0.0,162
+1474517,0,3.0,Phone,Amyburgh,6.0,Debit Card,Male,2.0,3,Mobile,3,Married,2,0,14.0,0.0,4.0,1.0,269
+5130996,0,0.0,Mobile Phone,Christinafort,17.0,Debit Card,Male,2.0,4,Grocery,2,Married,7,0,17.0,0.0,1.0,6.0,136
+13458904,1,,Computer,Francisborough,5.0,Credit Card,Female,2.0,3,Mobile,5,Single,2,1,23.0,1.0,1.0,2.0,113
+12787453,0,26.0,Computer,Port Maryborough,14.0,Debit Card,Male,3.0,3,Laptop & Accessory,2,Divorced,7,0,18.0,0.0,1.0,8.0,221
+6149529,0,0.0,Phone,Brendanbury,33.0,Debit Card,Male,,3,Laptop & Accessory,5,Single,2,0,23.0,1.0,1.0,1.0,155
+11007960,0,0.0,Phone,South Catherinemouth,6.0,Debit Card,Female,2.0,3,Laptop & Accessory,5,Divorced,1,0,25.0,,1.0,3.0,123
+2194947,0,,Computer,Parkerchester,6.0,Credit Card,Male,3.0,3,Laptop & Accessory,2,Divorced,2,1,12.0,0.0,13.0,3.0,300
+6734223,0,,Computer,North Kimberlychester,34.0,Debit Card,Female,3.0,3,Mobile,2,Married,6,0,,0.0,1.0,5.0,180
+12048160,0,9.0,Phone,Karenchester,11.0,Debit Card,Female,2.0,3,Laptop & Accessory,2,Divorced,6,1,12.0,0.0,1.0,3.0,123
+10713871,0,0.0,Computer,New Jameschester,14.0,CC,Male,3.0,3,Laptop & Accessory,2,Divorced,6,0,14.0,1.0,1.0,1.0,155
+3130269,0,1.0,Computer,Julianfort,28.0,Credit Card,Female,3.0,3,Others,5,Single,5,0,13.0,1.0,1.0,5.0,195
+8130402,0,11.0,Mobile Phone,Ericfurt,,E wallet,Male,2.0,3,Laptop & Accessory,2,Divorced,7,1,16.0,8.0,1.0,1.0,175
+4003792,0,,Mobile Phone,Novakville,15.0,E wallet,Male,,4,Others,2,Divorced,9,1,14.0,0.0,1.0,6.0,191
+15289201,0,24.0,Computer,Troybury,,CC,Female,2.0,4,Grocery,2,Single,2,0,14.0,0.0,1.0,2.0,156
+170902,1,0.0,Mobile Phone,North Kelly,26.0,Credit Card,Female,3.0,3,Mobile,2,Divorced,2,1,13.0,1.0,1.0,0.0,190
+13607234,1,0.0,Mobile Phone,Hamiltonshire,18.0,Debit Card,Male,3.0,3,Mobile,3,Single,6,0,23.0,,1.0,0.0,242
+5094226,1,1.0,Mobile Phone,Port Michael,12.0,Debit Card,Male,3.0,3,Fashion,2,Divorced,8,0,21.0,1.0,1.0,6.0,284
+16770771,0,30.0,Phone,Port Robertland,21.0,Debit Card,Male,1.0,3,Mobile,5,Divorced,7,0,17.0,0.0,1.0,2.0,111
+14164175,1,1.0,Mobile Phone,Fosterborough,5.0,E wallet,Male,2.0,3,Mobile,3,Married,1,0,15.0,0.0,1.0,2.0,169
+16003524,1,,Phone,Alexandermouth,11.0,Credit Card,Female,,4,Laptop & Accessory,4,Divorced,4,1,16.0,1.0,1.0,1.0,170
+2982409,1,6.0,Mobile Phone,Velasquezborough,28.0,Debit Card,Female,2.0,2,Laptop & Accessory,2,Divorced,6,1,18.0,1.0,5.0,7.0,239
+4656449,0,6.0,Phone,West Bryan,12.0,Debit Card,Male,2.0,3,Laptop & Accessory,4,Divorced,1,1,15.0,0.0,3.0,,233
+14748720,0,0.0,Computer,Lake Dale,9.0,Cash on Delivery,Male,3.0,4,Mobile Phone,4,Divorced,6,0,17.0,0.0,5.0,1.0,158
+15309348,0,0.0,Mobile Phone,North Jason,26.0,Debit Card,Female,2.0,3,Laptop & Accessory,2,Divorced,2,0,18.0,1.0,1.0,8.0,168
+1644046,0,0.0,Phone,Travisside,15.0,Debit Card,Female,2.0,3,Others,3,Single,8,0,25.0,0.0,1.0,0.0,148
+7411610,0,0.0,Computer,Hubbardborough,6.0,Credit Card,Male,3.0,2,Others,2,Married,6,1,12.0,1.0,1.0,1.0,157
+12528860,1,5.0,Mobile Phone,West Stephanie,18.0,E wallet,Female,3.0,3,Laptop & Accessory,3,Married,7,1,12.0,1.0,1.0,5.0,149
+6790777,0,3.0,Mobile Phone,West Logan,35.0,Credit Card,Female,2.0,4,Fashion,4,Divorced,8,1,15.0,1.0,1.0,0.0,118
+7842673,0,0.0,Computer,Christopherton,35.0,CC,Male,,3,Laptop & Accessory,5,Single,3,1,11.0,0.0,3.0,10.0,160
+451227,0,9.0,Phone,Anthonyville,8.0,Credit Card,Male,3.0,4,Laptop & Accessory,2,Divorced,3,0,22.0,1.0,1.0,1.0,221
+4952512,0,9.0,Computer,West Natalie,9.0,Debit Card,Male,3.0,5,Laptop & Accessory,3,Married,6,0,15.0,1.0,4.0,3.0,169
+13291766,1,0.0,Mobile Phone,Jonesberg,16.0,Credit Card,Female,1.0,5,Others,5,Married,2,0,14.0,0.0,1.0,0.0,163
+929822,1,0.0,Computer,West Cherylbury,6.0,Cash on Delivery,Male,3.0,4,Fashion,3,Married,3,0,12.0,0.0,8.0,1.0,185
+15923862,1,0.0,Computer,Andreatown,16.0,UPI,Male,,3,Laptop & Accessory,4,Single,3,0,21.0,1.0,15.0,1.0,139
+8357531,0,7.0,Phone,New Samanthaport,14.0,Debit Card,Male,3.0,3,Mobile,3,Single,3,1,12.0,0.0,1.0,1.0,162
+13396918,0,13.0,Computer,Riosfurt,7.0,Debit Card,Male,3.0,3,Mobile,2,Married,3,0,13.0,1.0,1.0,1.0,210
+16170573,1,0.0,Computer,Lake Holly,14.0,CC,Female,3.0,4,Mobile,5,Divorced,7,0,17.0,0.0,1.0,9.0,126
+1898275,1,0.0,Phone,Wrightton,5.0,Debit Card,Male,3.0,5,Laptop & Accessory,2,Single,4,1,16.0,1.0,1.0,1.0,300
+12053206,0,5.0,Mobile Phone,Fordfort,6.0,COD,Male,2.0,3,Mobile Phone,5,Single,6,0,18.0,1.0,7.0,1.0,134
+9479181,1,,Mobile Phone,South Bradleyfurt,17.0,Debit Card,Male,,3,Mobile,2,Divorced,10,0,12.0,0.0,1.0,2.0,147
+11313307,0,3.0,Mobile Phone,North Roberto,5.0,Credit Card,Female,3.0,5,Mobile,3,Divorced,7,0,15.0,,1.0,0.0,164
+11538266,0,0.0,Computer,Port Janet,10.0,Credit Card,Female,2.0,4,Mobile,3,Single,12,0,17.0,1.0,1.0,1.0,208
+1336658,0,0.0,Phone,Michelleberg,9.0,Cash on Delivery,Male,3.0,4,Mobile,2,Single,6,0,16.0,1.0,7.0,0.0,146
+7100979,0,8.0,Phone,Pattersonshire,5.0,Credit Card,Male,,3,Mobile Phone,5,Divorced,10,0,22.0,1.0,1.0,3.0,244
+13314548,0,12.0,Computer,Port Michael,,Debit Card,Female,2.0,3,Fashion,5,Single,2,0,25.0,1.0,4.0,4.0,201
+6585665,0,3.0,Mobile Phone,Danieltown,11.0,Credit Card,Female,3.0,4,Fashion,5,Married,2,0,19.0,0.0,1.0,8.0,123
+8389002,0,,Computer,Lake Amy,8.0,Debit Card,Female,,4,Mobile,3,Married,6,1,14.0,0.0,2.0,8.0,130
+13195979,0,0.0,Phone,Brianmouth,35.0,Debit Card,Male,2.0,3,Mobile,4,Single,2,0,21.0,3.0,11.0,0.0,166
+13192230,0,7.0,Computer,North Timothyview,19.0,CC,Male,3.0,3,Laptop & Accessory,4,Married,4,0,12.0,1.0,1.0,8.0,168
+12477441,0,0.0,Phone,South Ryanmouth,15.0,Debit Card,Female,3.0,4,Mobile,3,Single,3,1,24.0,0.0,2.0,2.0,163
+1143962,1,1.0,Computer,Jamesside,13.0,Credit Card,Female,2.0,4,Laptop & Accessory,4,Single,7,0,12.0,1.0,,0.0,212
+15068204,0,0.0,Computer,South Colleenberg,8.0,CC,Female,2.0,4,Mobile,5,Married,5,0,17.0,1.0,1.0,1.0,145
+4491290,1,5.0,Mobile Phone,South Valerie,18.0,E wallet,Male,2.0,3,Mobile,3,Divorced,2,0,24.0,1.0,1.0,1.0,150
+576281,0,30.0,Computer,Smithburgh,5.0,CC,Male,2.0,3,Fashion,4,Divorced,5,0,19.0,0.0,1.0,6.0,175
+16074601,0,4.0,Phone,Mckinneystad,32.0,Debit Card,Female,3.0,3,Laptop & Accessory,2,Divorced,5,0,,0.0,1.0,0.0,224
+8768018,0,0.0,Mobile Phone,Lake Thomas,8.0,UPI,Male,2.0,3,Laptop & Accessory,3,Divorced,7,0,16.0,3.0,15.0,15.0,249
+3747944,0,8.0,Mobile Phone,Port Bradystad,35.0,E wallet,Female,3.0,3,Laptop & Accessory,4,Married,2,1,18.0,1.0,1.0,4.0,217
+4494155,0,11.0,Computer,New Williambury,10.0,Debit Card,Male,2.0,3,Laptop & Accessory,2,Married,4,0,19.0,3.0,1.0,1.0,203
+15244552,0,9.0,Computer,Amandashire,6.0,COD,Male,2.0,4,Mobile Phone,2,Single,7,0,22.0,0.0,1.0,0.0,205
+15579907,1,3.0,Computer,Port Timothy,9.0,COD,Female,2.0,3,Laptop & Accessory,5,Married,7,0,16.0,0.0,1.0,6.0,237
+13787859,0,21.0,Computer,New Johnchester,27.0,UPI,Male,2.0,4,Mobile,5,Single,3,0,14.0,1.0,1.0,0.0,133
+9364514,0,8.0,Computer,Georgeview,10.0,Credit Card,Female,2.0,3,Mobile Phone,2,Single,3,0,11.0,0.0,2.0,5.0,187
+7897821,0,27.0,Computer,East Darryltown,14.0,COD,Female,2.0,3,Fashion,2,Divorced,8,0,16.0,,1.0,1.0,184
+8162417,0,1.0,Computer,Barryburgh,11.0,Credit Card,Male,2.0,3,Laptop & Accessory,5,Single,2,0,16.0,0.0,1.0,0.0,145
+15914798,0,3.0,Computer,Margaretchester,21.0,CC,Male,2.0,3,Laptop & Accessory,5,Single,3,0,16.0,0.0,1.0,0.0,175
+3552431,0,13.0,Phone,East Prestonview,13.0,Debit Card,Female,3.0,4,Laptop & Accessory,2,Single,3,0,20.0,1.0,1.0,1.0,133
+12510649,0,25.0,Computer,North Georgechester,10.0,Credit Card,Male,3.0,3,Fashion,2,Single,5,0,12.0,0.0,1.0,8.0,241
+1365462,0,4.0,Phone,Ochoabury,31.0,COD,Female,3.0,4,Laptop & Accessory,2,Married,3,1,19.0,,4.0,7.0,203
+11629648,0,,Phone,South Jeffery,11.0,Debit Card,Male,2.0,3,Others,5,Single,5,0,16.0,0.0,1.0,5.0,185
+13228881,1,0.0,Phone,Jacquelineland,5.0,Debit Card,Female,2.0,3,Mobile,4,Divorced,12,1,15.0,1.0,1.0,1.0,148
+16030350,1,0.0,Phone,West Adamtown,,E wallet,Male,2.0,4,Laptop & Accessory,4,Single,13,0,13.0,0.0,1.0,3.0,198
+237439,0,1.0,Phone,Kathyville,11.0,CC,Female,2.0,3,Mobile,4,Single,2,0,18.0,0.0,1.0,3.0,150
+8189186,1,18.0,Phone,South Julieland,14.0,Credit Card,Female,2.0,3,Fashion,3,Divorced,3,0,17.0,0.0,1.0,7.0,178
+5261005,0,,Phone,Ryanchester,13.0,CC,Male,,3,Laptop & Accessory,2,Divorced,3,0,,6.0,1.0,9.0,136
+6385919,0,0.0,Phone,Amyview,13.0,COD,Female,2.0,4,Fashion,3,Divorced,11,0,17.0,0.0,,1.0,197
+1633700,1,6.0,Phone,Lindaton,10.0,Credit Card,Female,2.0,4,Laptop & Accessory,2,Married,5,0,17.0,0.0,1.0,4.0,132
+15695535,0,13.0,Computer,Banksland,17.0,E wallet,Female,2.0,3,Grocery,2,Married,2,1,12.0,0.0,1.0,6.0,212
+4810112,1,3.0,Computer,East Ronaldfort,15.0,Debit Card,Female,2.0,2,Mobile,2,Single,10,0,11.0,0.0,1.0,1.0,155
+10598925,0,11.0,Mobile Phone,Lake Kennethville,35.0,Debit Card,Male,2.0,4,Mobile,2,Married,3,0,24.0,6.0,1.0,3.0,263
+4950439,0,4.0,Phone,Matthewberg,18.0,E wallet,Female,2.0,3,Others,4,Married,3,1,19.0,1.0,1.0,2.0,127
+5507810,0,2.0,Mobile Phone,Williamsfort,,Debit Card,Male,3.0,4,Mobile,2,Single,2,0,12.0,1.0,5.0,6.0,120
+4398203,0,2.0,Mobile Phone,North Daniel,30.0,Credit Card,Male,3.0,4,Mobile Phone,3,Divorced,2,1,18.0,1.0,,3.0,162
+15532408,0,30.0,Phone,North Alyssa,5.0,Debit Card,Female,,3,Laptop & Accessory,2,Married,4,1,22.0,1.0,1.0,2.0,119
+11687455,1,0.0,Mobile Phone,Port Michael,15.0,CC,Female,3.0,4,Mobile,4,Single,2,1,14.0,2.0,1.0,0.0,166
+16537666,0,5.0,Mobile Phone,Brianbury,13.0,UPI,Male,3.0,4,Laptop & Accessory,2,Single,2,1,,1.0,1.0,3.0,165
+13704607,0,11.0,Computer,Osborneland,18.0,Debit Card,Male,2.0,3,Laptop & Accessory,5,Divorced,5,1,23.0,1.0,5.0,1.0,300
+15232847,0,3.0,Phone,Ruizview,11.0,Credit Card,Female,3.0,5,Laptop & Accessory,2,Single,2,0,11.0,0.0,1.0,0.0,148
+9951664,1,3.0,Computer,Patrickberg,14.0,UPI,Female,2.0,4,Mobile,5,Divorced,9,0,12.0,0.0,1.0,9.0,166
+680632,0,3.0,Phone,Patrickview,19.0,Credit Card,Male,,3,Mobile,5,Single,4,0,25.0,,1.0,2.0,148
+8659475,0,0.0,Phone,North Jasmine,,UPI,Female,3.0,4,Fashion,2,Married,3,0,14.0,0.0,2.0,4.0,154
+4517152,1,3.0,Mobile Phone,North Rachel,11.0,UPI,Male,2.0,4,Fashion,2,Married,3,1,18.0,0.0,10.0,1.0,182
+10318408,1,8.0,Mobile Phone,Yufurt,8.0,Debit Card,Male,3.0,5,Fashion,2,Divorced,3,0,18.0,1.0,1.0,1.0,123
+5650346,1,0.0,Phone,East Robertfurt,,E wallet,Female,3.0,4,Mobile,3,Single,2,1,19.0,0.0,1.0,5.0,122
+10913642,0,26.0,Mobile Phone,Elliottside,26.0,Debit Card,Male,,3,Laptop & Accessory,4,Single,2,1,25.0,0.0,1.0,3.0,298
+12728192,1,0.0,Mobile Phone,Brandonbury,12.0,COD,Male,2.0,3,Mobile,3,Single,5,1,16.0,1.0,1.0,0.0,213
+11541960,0,30.0,Phone,South Markland,8.0,Credit Card,Male,,2,Mobile,2,Divorced,3,1,14.0,2.0,1.0,1.0,215
+6249883,0,1.0,Phone,Osborneton,6.0,Debit Card,Male,2.0,4,Laptop & Accessory,2,Single,3,1,19.0,1.0,8.0,1.0,226
+10226055,1,7.0,Mobile Phone,New Spencerfurt,14.0,E wallet,Male,2.0,3,Mobile,4,Single,3,1,13.0,0.0,1.0,2.0,201
+3865983,0,0.0,Phone,Hubbardhaven,15.0,Credit Card,Female,2.0,3,Fashion,2,Divorced,7,1,14.0,1.0,1.0,,166
+15993746,0,0.0,Phone,Lake Lauraville,9.0,UPI,Female,3.0,3,Fashion,4,Divorced,1,0,25.0,1.0,1.0,0.0,204
+4960165,0,3.0,Mobile Phone,Alexanderberg,20.0,UPI,Male,3.0,3,Mobile,5,Married,2,0,14.0,0.0,12.0,2.0,126
+14359411,0,10.0,Mobile Phone,Camachoville,10.0,CC,Female,3.0,4,Laptop & Accessory,3,Divorced,5,1,21.0,5.0,1.0,5.0,129
+16729336,0,19.0,Computer,Emilyfort,11.0,Debit Card,Male,2.0,3,Laptop & Accessory,2,Divorced,4,0,25.0,0.0,1.0,0.0,226
+15865252,0,10.0,Computer,New Laurie,6.0,Credit Card,Male,2.0,3,Laptop & Accessory,2,Single,2,1,14.0,1.0,1.0,7.0,199
+16228033,0,7.0,Computer,New Amy,12.0,Cash on Delivery,Male,3.0,3,Laptop & Accessory,5,Married,2,0,25.0,0.0,15.0,1.0,149
+123436,0,,Phone,South Michael,9.0,Debit Card,Female,3.0,3,Mobile,3,Divorced,6,0,25.0,1.0,1.0,5.0,208
+12389782,1,10.0,Computer,Lake David,13.0,CC,Female,2.0,3,Fashion,4,Single,7,0,14.0,0.0,1.0,2.0,137
+10150799,0,0.0,Mobile Phone,South Traciechester,17.0,Debit Card,Male,2.0,4,Mobile,2,Divorced,6,1,25.0,0.0,1.0,3.0,160
+5967908,0,,Phone,Port Elizabeth,9.0,Debit Card,Female,3.0,2,Mobile Phone,2,Divorced,2,1,21.0,0.0,1.0,4.0,145
+15501893,0,12.0,Computer,Lake William,15.0,Debit Card,Male,3.0,3,Laptop & Accessory,5,Single,10,1,13.0,0.0,2.0,,114
+5378507,0,,Mobile Phone,East Kathrynmouth,9.0,Debit Card,Male,2.0,3,Mobile,3,Married,5,1,17.0,1.0,9.0,6.0,177
+7827012,1,0.0,Phone,Riosmouth,5.0,COD,Male,2.0,3,Mobile,3,Married,6,0,13.0,0.0,1.0,1.0,185
+3245602,0,15.0,Mobile Phone,New David,14.0,Credit Card,Male,2.0,4,Mobile,5,Divorced,4,0,23.0,4.0,2.0,6.0,300
+9178531,1,0.0,Mobile Phone,Benjaminville,9.0,CC,Female,2.0,3,Laptop & Accessory,4,Married,2,0,25.0,1.0,5.0,5.0,154
+1860784,0,,Mobile Phone,Castillostad,5.0,Debit Card,Female,2.0,3,Others,3,Single,2,1,14.0,1.0,1.0,7.0,166
+11936295,0,12.0,Phone,Johntown,27.0,Debit Card,Male,3.0,3,Mobile Phone,2,Single,1,0,19.0,1.0,1.0,1.0,152
+5932442,0,20.0,Computer,Williamsside,12.0,Credit Card,Male,3.0,4,Laptop & Accessory,3,Divorced,2,1,18.0,1.0,2.0,1.0,183
+7234501,0,,Computer,Hardinhaven,35.0,Debit Card,Male,2.0,3,Mobile Phone,2,Single,2,0,21.0,5.0,6.0,2.0,132
+9399728,0,12.0,Computer,East Danielle,9.0,CC,Male,3.0,4,Fashion,2,Divorced,7,0,18.0,1.0,1.0,10.0,248
+994542,0,9.0,Phone,Ruizville,5.0,CC,Female,3.0,2,Mobile,5,Married,6,0,18.0,1.0,2.0,2.0,189
+12796547,0,0.0,Mobile Phone,Loveborough,9.0,Debit Card,Female,2.0,4,Fashion,2,Single,6,0,13.0,0.0,1.0,3.0,173
+1897822,1,0.0,Mobile Phone,Lake Christina,11.0,CC,Female,2.0,4,Laptop & Accessory,3,Married,1,0,23.0,1.0,11.0,0.0,164
+7465375,1,27.0,Phone,Port Mary,14.0,Debit Card,Male,2.0,4,Grocery,3,Divorced,2,0,13.0,1.0,1.0,1.0,104
+4352442,1,16.0,Mobile Phone,Ashleystad,,Debit Card,Male,3.0,3,Mobile,4,Single,7,0,13.0,1.0,1.0,3.0,153
+15610354,0,0.0,Phone,New Katherine,10.0,Debit Card,Male,2.0,4,Mobile Phone,2,Single,4,1,17.0,1.0,1.0,1.0,209
+11284806,0,3.0,Phone,Lake Matthewfort,11.0,Credit Card,Female,3.0,1,Mobile,3,Married,2,0,13.0,0.0,1.0,1.0,127
+7008476,0,30.0,Mobile Phone,New Lori,16.0,CC,Male,2.0,3,Laptop & Accessory,4,Divorced,1,0,17.0,0.0,1.0,5.0,192
+8421001,1,4.0,Computer,Matthewfurt,14.0,UPI,Male,2.0,2,Laptop & Accessory,3,Single,6,1,14.0,,12.0,1.0,176
+14170480,0,0.0,Mobile Phone,North Courtneyshire,28.0,Debit Card,Female,2.0,3,Others,2,Divorced,7,0,25.0,0.0,1.0,1.0,202
+8232474,0,4.0,Phone,Lake Adamtown,16.0,E wallet,Male,3.0,3,Laptop & Accessory,5,Married,6,1,14.0,0.0,2.0,1.0,175
+6381632,0,7.0,Phone,Aaronport,13.0,E wallet,Male,2.0,3,Fashion,2,Divorced,2,1,25.0,0.0,1.0,1.0,132
+1998204,1,,Computer,North Stephanie,6.0,COD,Female,3.0,4,Fashion,3,Single,7,0,22.0,4.0,11.0,2.0,145
+12853459,0,5.0,Mobile Phone,North Timothyborough,35.0,Debit Card,Male,2.0,4,Fashion,2,Divorced,2,0,25.0,0.0,14.0,5.0,237
+2657516,0,0.0,Computer,South Aliceburgh,12.0,Credit Card,Male,2.0,3,Mobile,2,Single,2,1,12.0,0.0,4.0,0.0,112
+14794111,1,6.0,Computer,Cookfurt,8.0,Debit Card,Female,3.0,3,Grocery,2,Divorced,2,0,19.0,,1.0,0.0,139
+5634227,1,0.0,Computer,Seanstad,11.0,Credit Card,Female,2.0,4,Fashion,4,Married,2,1,19.0,1.0,1.0,0.0,167
+8408523,1,0.0,Phone,Smithstad,14.0,COD,Female,2.0,3,Laptop & Accessory,3,Single,3,1,18.0,0.0,2.0,2.0,199
+7976561,0,0.0,Computer,Joymouth,35.0,Debit Card,Female,3.0,3,Mobile,4,Single,2,1,24.0,0.0,,2.0,117
+8344786,1,2.0,Phone,Lake Patriciaburgh,23.0,E wallet,Female,2.0,2,Laptop & Accessory,3,Single,5,0,17.0,1.0,1.0,3.0,151
+2184427,0,7.0,Phone,North Jerryton,6.0,E wallet,Female,2.0,5,Laptop & Accessory,2,Divorced,5,0,13.0,1.0,1.0,0.0,239
+13933775,0,6.0,Computer,East Jessica,5.0,Debit Card,Female,0.0,3,Mobile,2,Divorced,6,1,23.0,0.0,4.0,2.0,153
+2397023,0,2.0,Phone,South Shanechester,9.0,Debit Card,Female,3.0,3,Mobile,2,Divorced,2,0,17.0,0.0,1.0,0.0,179
+9151317,1,15.0,Computer,South Maryfort,5.0,Debit Card,Male,3.0,4,Grocery,2,Divorced,2,0,21.0,2.0,1.0,0.0,134
+4322595,0,,Mobile Phone,Micheleberg,5.0,Debit Card,Male,3.0,4,Laptop & Accessory,4,Divorced,6,1,21.0,0.0,1.0,0.0,242
+1197571,1,1.0,Mobile Phone,Angelaport,7.0,Credit Card,Female,3.0,2,Laptop & Accessory,4,Divorced,2,1,15.0,0.0,1.0,4.0,155
+11976671,0,,Computer,Birdtown,,UPI,Male,2.0,2,Mobile Phone,2,Single,5,1,13.0,1.0,2.0,3.0,159
+14005570,0,,Computer,Port Jeffreyborough,16.0,Debit Card,Female,2.0,3,Laptop & Accessory,5,Single,2,0,18.0,0.0,,0.0,164
+3645539,0,0.0,Phone,West Jason,8.0,Credit Card,Female,3.0,1,Laptop & Accessory,4,Married,6,1,,0.0,1.0,2.0,108
+1094963,0,0.0,Mobile Phone,New Margaret,19.0,Debit Card,Female,3.0,1,Laptop & Accessory,4,Married,2,0,19.0,1.0,2.0,2.0,168
+12262438,0,4.0,Computer,Odomside,9.0,CC,Male,2.0,3,Laptop & Accessory,4,Divorced,3,0,18.0,1.0,15.0,1.0,186
+14634236,0,1.0,Computer,Cherylshire,13.0,Debit Card,Male,2.0,3,Fashion,3,Divorced,2,0,13.0,1.0,1.0,2.0,181
+13569963,0,12.0,Phone,South Mandy,,COD,Male,,3,Mobile,3,Single,5,0,16.0,1.0,1.0,8.0,125
+13594171,0,6.0,Phone,Lake Jeffrey,16.0,UPI,Female,3.0,3,Laptop & Accessory,2,Divorced,6,0,15.0,0.0,1.0,5.0,170
+2673392,1,6.0,Phone,New Albert,12.0,Credit Card,Female,2.0,4,Mobile,2,Divorced,2,0,20.0,3.0,1.0,2.0,188
+6529747,0,0.0,Phone,Shannonstad,27.0,Credit Card,Male,3.0,4,Laptop & Accessory,5,Married,12,0,19.0,0.0,15.0,0.0,177
+7283236,0,0.0,Phone,Nunezborough,8.0,Debit Card,Male,3.0,4,Laptop & Accessory,5,Single,8,1,11.0,0.0,1.0,8.0,164
+802974,0,20.0,Computer,Robertsburgh,12.0,Debit Card,Male,2.0,3,Laptop & Accessory,4,Divorced,6,0,13.0,1.0,1.0,,201
+4755020,1,3.0,Computer,Kelseyfurt,,E wallet,Female,,2,Laptop & Accessory,3,Divorced,2,0,15.0,,1.0,0.0,216
+12727440,0,0.0,Mobile Phone,South Stephanie,7.0,COD,Male,3.0,3,Fashion,3,Single,3,0,15.0,1.0,5.0,6.0,240
+3722011,0,2.0,Computer,New Rebecca,9.0,CC,Male,2.0,3,Mobile,5,Single,4,0,13.0,0.0,1.0,2.0,149
+9758917,0,,Phone,Sherryside,12.0,Credit Card,Female,2.0,4,Mobile Phone,2,Single,2,0,13.0,1.0,4.0,1.0,132
+930151,0,1.0,Mobile Phone,Lake Brian,17.0,Debit Card,Male,2.0,4,Laptop & Accessory,4,Single,2,0,19.0,1.0,3.0,3.0,200
+9543475,0,3.0,Computer,Hayesshire,9.0,Debit Card,Female,2.0,3,Others,4,Married,5,0,18.0,0.0,1.0,3.0,173
+2019090,0,7.0,Mobile Phone,South Reneeville,35.0,Credit Card,Female,2.0,3,Mobile,5,Divorced,3,0,19.0,0.0,2.0,5.0,202
+5727256,1,7.0,Phone,Holmesland,5.0,Credit Card,Female,2.0,4,Laptop & Accessory,2,Divorced,13,0,17.0,1.0,3.0,3.0,182
+5596607,0,2.0,Mobile Phone,Johnsonville,12.0,Debit Card,Male,2.0,3,Mobile Phone,3,Single,7,0,25.0,1.0,1.0,2.0,125
+1899332,0,8.0,Phone,Ruizport,5.0,CC,Female,2.0,4,Mobile,5,Single,10,0,25.0,1.0,7.0,4.0,300
+2455127,0,0.0,Computer,Lisaberg,30.0,Debit Card,Female,2.0,5,Others,5,Divorced,7,1,14.0,1.0,1.0,0.0,183
+15882131,0,22.0,Mobile Phone,Lake Edward,12.0,CC,Female,0.0,4,Others,3,Married,3,1,16.0,5.0,4.0,1.0,144
+7300448,0,30.0,Phone,Evanborough,11.0,Credit Card,Female,3.0,5,Laptop & Accessory,2,Divorced,3,1,18.0,0.0,1.0,3.0,170
+2338219,1,2.0,Mobile Phone,New Amber,,Credit Card,Male,3.0,4,Mobile,3,Married,6,0,19.0,1.0,1.0,0.0,238
+16433696,0,,Computer,Smithshire,9.0,Debit Card,Female,2.0,4,Laptop & Accessory,5,Divorced,6,0,25.0,1.0,1.0,0.0,247
+241147,0,,Mobile Phone,Port Tiffany,15.0,Credit Card,Male,3.0,2,Mobile,4,Single,12,0,16.0,1.0,1.0,9.0,137
+10431052,1,0.0,Computer,Port Robertmouth,11.0,E wallet,Male,3.0,3,Mobile,4,Single,1,1,13.0,1.0,1.0,0.0,225
+9914452,0,10.0,Phone,Linmouth,9.0,Credit Card,Female,2.0,4,Fashion,3,Divorced,2,0,18.0,0.0,1.0,2.0,150
+13448787,0,,Phone,New Alexandriaberg,31.0,E wallet,Female,,4,Others,3,Single,4,0,25.0,0.0,1.0,6.0,210
+15317078,0,0.0,Mobile Phone,Lindsayton,16.0,Credit Card,Male,2.0,4,Fashion,4,Divorced,5,1,24.0,0.0,,4.0,138
+10109977,0,12.0,Computer,Santosfort,35.0,Credit Card,Female,3.0,3,Laptop & Accessory,2,Divorced,4,0,25.0,3.0,1.0,1.0,145
+5351520,0,,Mobile Phone,Lake Danielstad,10.0,E wallet,Female,,5,Mobile,3,Married,7,0,20.0,1.0,1.0,2.0,202
+10636466,1,3.0,Mobile Phone,Jonhaven,24.0,E wallet,Female,,2,Mobile,3,Divorced,1,0,22.0,1.0,1.0,2.0,300
+11817481,0,0.0,Mobile Phone,New Kelsey,32.0,Debit Card,Male,3.0,2,Fashion,3,Single,3,1,13.0,1.0,3.0,2.0,163
+14492613,0,0.0,Phone,West Valerieside,5.0,Debit Card,Male,2.0,3,Laptop & Accessory,2,Divorced,1,0,18.0,0.0,1.0,1.0,146
+3688080,1,1.0,Mobile Phone,West Hunter,9.0,UPI,Male,2.0,3,Mobile,5,Single,6,0,16.0,0.0,1.0,5.0,190
+5649196,0,0.0,Phone,Wigginsfurt,8.0,Debit Card,Male,2.0,1,Laptop & Accessory,5,Single,6,1,,0.0,7.0,1.0,243
+15073597,0,0.0,Computer,Lisatown,14.0,Debit Card,Male,3.0,4,Laptop & Accessory,4,Divorced,3,0,17.0,0.0,1.0,2.0,146
+3778810,1,0.0,Mobile Phone,New Kristina,7.0,Debit Card,Female,3.0,2,Mobile,5,Single,5,0,15.0,0.0,1.0,1.0,206
+13595842,0,14.0,Phone,Nelsonmouth,10.0,CC,Male,,3,Grocery,4,Single,1,0,15.0,0.0,1.0,9.0,169
+13991285,0,0.0,Phone,Sotoberg,5.0,Credit Card,Female,2.0,5,Laptop & Accessory,3,Single,3,1,17.0,0.0,3.0,2.0,145
+15960870,0,6.0,Computer,Port Christinemouth,,Debit Card,Male,3.0,3,Mobile,3,Married,2,0,15.0,,1.0,6.0,124
+16166048,0,6.0,Computer,Port Justin,12.0,Credit Card,Male,2.0,3,Mobile,2,Single,7,0,17.0,0.0,1.0,0.0,246
+9808051,0,0.0,Phone,Seanburgh,14.0,Credit Card,Female,3.0,4,Laptop & Accessory,2,Divorced,7,0,25.0,1.0,1.0,1.0,238
+7796825,0,1.0,Phone,Tatechester,7.0,Credit Card,Female,2.0,4,Others,3,Divorced,5,0,21.0,5.0,3.0,0.0,181
+16424590,0,9.0,Computer,North Michael,20.0,COD,Female,2.0,4,Laptop & Accessory,4,Married,6,1,20.0,1.0,1.0,2.0,166
+13774959,0,8.0,Phone,Allisontown,11.0,Credit Card,Female,2.0,3,Laptop & Accessory,2,Divorced,3,0,19.0,0.0,2.0,2.0,292
+11497356,0,6.0,Mobile Phone,South Richard,15.0,COD,Male,2.0,3,Mobile,3,Single,5,0,16.0,1.0,1.0,4.0,174
+8914970,0,7.0,Mobile Phone,Williamsfurt,11.0,UPI,Female,2.0,3,Fashion,5,Divorced,4,0,22.0,1.0,1.0,0.0,258
+1395470,0,21.0,Mobile Phone,Kingport,,COD,Male,2.0,3,Mobile Phone,2,Divorced,3,0,18.0,0.0,1.0,2.0,159
+868461,0,0.0,Computer,Coreyburgh,9.0,Debit Card,Female,2.0,3,Mobile,2,Single,5,0,25.0,0.0,1.0,5.0,186
+11967853,0,,Phone,Emmahaven,,Credit Card,Male,2.0,3,Laptop & Accessory,3,Married,3,0,13.0,1.0,1.0,3.0,114
+11772047,0,12.0,Phone,Scottborough,18.0,UPI,Male,3.0,3,Fashion,3,Divorced,7,0,14.0,1.0,3.0,1.0,125
+15383399,0,6.0,Phone,West Victorfort,35.0,CC,Female,3.0,3,Others,3,Single,7,0,18.0,1.0,6.0,5.0,164
+11617824,0,3.0,Phone,Fisherville,16.0,Credit Card,Male,2.0,2,Laptop & Accessory,2,Single,6,0,12.0,0.0,1.0,7.0,206
+1496918,0,0.0,Computer,Port Matthew,17.0,UPI,Female,1.0,4,Mobile,2,Divorced,5,1,21.0,5.0,15.0,1.0,161
+10238669,0,22.0,Phone,Wrighttown,10.0,Debit Card,Male,2.0,4,Mobile,2,Married,1,0,19.0,1.0,1.0,1.0,159
+7034169,0,0.0,Mobile Phone,Bonniemouth,13.0,E wallet,Female,,3,Grocery,2,Married,3,0,20.0,1.0,2.0,2.0,221
+1032447,0,,Phone,New Robert,29.0,COD,Female,2.0,3,Laptop & Accessory,4,Married,3,1,22.0,0.0,1.0,0.0,191
+15049895,0,0.0,Mobile Phone,Salazarborough,15.0,Debit Card,Male,2.0,4,Fashion,4,Divorced,2,0,15.0,1.0,1.0,6.0,147
+921467,1,1.0,Phone,Guerraville,13.0,UPI,Male,2.0,3,Mobile,2,Divorced,1,0,25.0,7.0,1.0,1.0,179
+3538057,1,0.0,Computer,Freyview,,Credit Card,Female,3.0,2,Mobile,5,Divorced,2,1,25.0,1.0,1.0,6.0,176
+16446565,0,23.0,Mobile Phone,Williamsland,16.0,Credit Card,Male,2.0,4,Laptop & Accessory,5,Divorced,1,1,12.0,,1.0,1.0,132
+2236172,0,10.0,Computer,Castanedahaven,11.0,COD,Male,,3,Fashion,2,Single,7,0,21.0,1.0,1.0,2.0,156

@@ -1,0 +1,383 @@
+{
+  "name": "Weekly Social Media Analytics Report",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 8 * * 1"
+            }
+          ]
+        }
+      },
+      "id": "trigger-schedule",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Calculate date range for previous week\nconst now = new Date();\nconst lastMonday = new Date(now);\nlastMonday.setDate(now.getDate() - 7);\nlastMonday.setHours(0, 0, 0, 0);\n\nconst lastSunday = new Date(lastMonday);\nlastSunday.setDate(lastMonday.getDate() + 6);\nlastSunday.setHours(23, 59, 59, 999);\n\nreturn {\n  startDate: lastMonday.toISOString(),\n  endDate: lastSunday.toISOString(),\n  startDateUnix: Math.floor(lastMonday.getTime() / 1000),\n  endDateUnix: Math.floor(lastSunday.getTime() / 1000),\n  startDateFormatted: lastMonday.toISOString().split('T')[0],\n  endDateFormatted: lastSunday.toISOString().split('T')[0]\n};"
+      },
+      "id": "calculate-dates",
+      "name": "Calculate Date Range",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.twitter.com/2/users/me",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "twitterOAuth2Api",
+        "options": {}
+      },
+      "id": "twitter-get-user-id",
+      "name": "Twitter - Get User ID",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [650, 200],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "=https://api.twitter.com/2/users/{{ $json.data.id }}/tweets?start_time={{ $('Calculate Date Range').item.json.startDate }}&end_time={{ $('Calculate Date Range').item.json.endDate }}&tweet.fields=public_metrics,created_at&max_results=100",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "twitterOAuth2Api",
+        "options": {}
+      },
+      "id": "twitter-get-analytics",
+      "name": "Twitter - Get Analytics",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [850, 200],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Process Twitter data\nconst items = $input.all();\n\nif (!items || items.length === 0 || !items[0].json.data) {\n  return {\n    platform: 'Twitter',\n    impressions: 0,\n    engagements: 0,\n    reach: 0,\n    engagementRate: 0,\n    totalTweets: 0,\n    error: null\n  };\n}\n\nconst tweets = items[0].json.data;\nlet totalImpressions = 0;\nlet totalEngagements = 0;\nlet totalRetweets = 0;\nlet totalLikes = 0;\nlet totalReplies = 0;\n\ntweets.forEach(tweet => {\n  const metrics = tweet.public_metrics || {};\n  totalImpressions += metrics.impression_count || 0;\n  totalRetweets += metrics.retweet_count || 0;\n  totalLikes += metrics.like_count || 0;\n  totalReplies += metrics.reply_count || 0;\n  totalEngagements += (metrics.retweet_count || 0) + (metrics.like_count || 0) + (metrics.reply_count || 0);\n});\n\nconst engagementRate = totalImpressions > 0 ? (totalEngagements / totalImpressions * 100).toFixed(2) : 0;\n\nreturn {\n  platform: 'Twitter',\n  impressions: totalImpressions,\n  engagements: totalEngagements,\n  reach: totalImpressions,\n  engagementRate: parseFloat(engagementRate),\n  totalTweets: tweets.length,\n  retweets: totalRetweets,\n  likes: totalLikes,\n  replies: totalReplies,\n  error: null\n};"
+      },
+      "id": "twitter-process-data",
+      "name": "Twitter - Process Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1050, 200]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "=https://api.linkedin.com/v2/organizationalEntityShareStatistics?q=organizationalEntity&organizationalEntity={{ $('LinkedIn - Get Organization ID').item.json.id }}&timeIntervals.timeGranularityType=DAY&timeIntervals.timeRange.start={{ $('Calculate Date Range').item.json.startDateUnix }}000&timeIntervals.timeRange.end={{ $('Calculate Date Range').item.json.endDateUnix }}000",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "linkedInOAuth2Api",
+        "options": {}
+      },
+      "id": "linkedin-get-analytics",
+      "name": "LinkedIn - Get Analytics",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [850, 400],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.linkedin.com/v2/me",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "linkedInOAuth2Api",
+        "options": {}
+      },
+      "id": "linkedin-get-org-id",
+      "name": "LinkedIn - Get Organization ID",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [650, 400],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Process LinkedIn data\nconst items = $input.all();\n\nif (!items || items.length === 0 || !items[0].json.elements) {\n  return {\n    platform: 'LinkedIn',\n    impressions: 0,\n    engagements: 0,\n    reach: 0,\n    engagementRate: 0,\n    totalPosts: 0,\n    error: null\n  };\n}\n\nconst elements = items[0].json.elements;\nlet totalImpressions = 0;\nlet totalEngagements = 0;\nlet totalClicks = 0;\nlet totalLikes = 0;\nlet totalComments = 0;\nlet totalShares = 0;\nlet uniqueReach = 0;\n\nelements.forEach(element => {\n  const stats = element.totalShareStatistics || {};\n  totalImpressions += stats.impressionCount || 0;\n  totalClicks += stats.clickCount || 0;\n  totalLikes += stats.likeCount || 0;\n  totalComments += stats.commentCount || 0;\n  totalShares += stats.shareCount || 0;\n  uniqueReach += stats.uniqueImpressionsCount || 0;\n  totalEngagements += (stats.clickCount || 0) + (stats.likeCount || 0) + (stats.commentCount || 0) + (stats.shareCount || 0);\n});\n\nconst engagementRate = totalImpressions > 0 ? (totalEngagements / totalImpressions * 100).toFixed(2) : 0;\n\nreturn {\n  platform: 'LinkedIn',\n  impressions: totalImpressions,\n  engagements: totalEngagements,\n  reach: uniqueReach > 0 ? uniqueReach : totalImpressions,\n  engagementRate: parseFloat(engagementRate),\n  totalPosts: elements.length,\n  clicks: totalClicks,\n  likes: totalLikes,\n  comments: totalComments,\n  shares: totalShares,\n  error: null\n};"
+      },
+      "id": "linkedin-process-data",
+      "name": "LinkedIn - Process Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1050, 400]
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll"
+      },
+      "id": "merge-all-data",
+      "name": "Merge All Platform Data",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
+      "position": [1250, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Aggregate all platform data into summary report\nconst items = $input.all();\nconst dateRange = $('Calculate Date Range').item.json;\n\n// Initialize platforms data\nconst platforms = {\n  twitter: null,\n  linkedin: null\n};\n\n// Extract platform data\nitems.forEach(item => {\n  if (item.json.platform === 'Twitter') {\n    platforms.twitter = item.json;\n  } else if (item.json.platform === 'LinkedIn') {\n    platforms.linkedin = item.json;\n  }\n});\n\n// Calculate totals\nlet totalImpressions = 0;\nlet totalEngagements = 0;\nlet totalReach = 0;\nlet platformCount = 0;\n\nconst platformDetails = [];\n\nObject.values(platforms).forEach(platform => {\n  if (platform && !platform.error) {\n    totalImpressions += platform.impressions || 0;\n    totalEngagements += platform.engagements || 0;\n    totalReach += platform.reach || 0;\n    platformCount++;\n    platformDetails.push(platform);\n  }\n});\n\nconst overallEngagementRate = totalImpressions > 0 \n  ? (totalEngagements / totalImpressions * 100).toFixed(2) \n  : 0;\n\n// Create summary report\nconst report = {\n  reportDate: new Date().toISOString(),\n  periodStart: dateRange.startDateFormatted,\n  periodEnd: dateRange.endDateFormatted,\n  summary: {\n    totalImpressions: totalImpressions,\n    totalEngagements: totalEngagements,\n    totalReach: totalReach,\n    overallEngagementRate: parseFloat(overallEngagementRate),\n    platformsReported: platformCount\n  },\n  platforms: platformDetails,\n  errors: items.filter(i => i.json.error).map(i => ({\n    platform: i.json.platform,\n    error: i.json.error\n  }))\n};\n\nreturn report;"
+      },
+      "id": "aggregate-report",
+      "name": "Aggregate Report",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1450, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Format HTML email report\nconst report = $input.item.json;\n\nconst html = `\n<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }\n    .container { max-width: 800px; margin: 0 auto; padding: 20px; }\n    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px; text-align: center; }\n    .summary { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; }\n    .metric { display: inline-block; margin: 10px 20px; text-align: center; }\n    .metric-value { font-size: 32px; font-weight: bold; color: #667eea; }\n    .metric-label { font-size: 14px; color: #666; }\n    .platform { background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin: 15px 0; }\n    .platform-name { font-size: 20px; font-weight: bold; margin-bottom: 15px; }\n    .platform-metrics { display: flex; flex-wrap: wrap; gap: 15px; }\n    .platform-metric { flex: 1; min-width: 120px; }\n    .error { background: #fff3cd; border: 1px solid #ffc107; padding: 15px; border-radius: 5px; margin: 10px 0; }\n    table { width: 100%; border-collapse: collapse; margin: 10px 0; }\n    td { padding: 8px; border-bottom: 1px solid #eee; }\n    td:first-child { font-weight: bold; width: 40%; }\n  </style>\n</head>\n<body>\n  <div class=\"container\">\n    <div class=\"header\">\n      <h1>📊 Weekly Social Media Analytics Report</h1>\n      <p>Period: ${report.periodStart} to ${report.periodEnd}</p>\n    </div>\n    \n    <div class=\"summary\">\n      <h2>📈 Overall Summary</h2>\n      <div style=\"text-align: center;\">\n        <div class=\"metric\">\n          <div class=\"metric-value\">${report.summary.totalImpressions.toLocaleString()}</div>\n          <div class=\"metric-label\">Total Impressions</div>\n        </div>\n        <div class=\"metric\">\n          <div class=\"metric-value\">${report.summary.totalEngagements.toLocaleString()}</div>\n          <div class=\"metric-label\">Total Engagements</div>\n        </div>\n        <div class=\"metric\">\n          <div class=\"metric-value\">${report.summary.totalReach.toLocaleString()}</div>\n          <div class=\"metric-label\">Total Reach</div>\n        </div>\n        <div class=\"metric\">\n          <div class=\"metric-value\">${report.summary.overallEngagementRate}%</div>\n          <div class=\"metric-label\">Engagement Rate</div>\n        </div>\n      </div>\n    </div>\n    \n    <h2>🔍 Platform Breakdown</h2>\n    \n    ${report.platforms.map(platform => `\n      <div class=\"platform\">\n        <div class=\"platform-name\">${platform.platform === 'Twitter' ? '🐦 Twitter' : platform.platform === 'LinkedIn' ? '💼 LinkedIn' : platform.platform}</div>\n        <table>\n          <tr><td>Impressions</td><td>${platform.impressions.toLocaleString()}</td></tr>\n          <tr><td>Engagements</td><td>${platform.engagements.toLocaleString()}</td></tr>\n          <tr><td>Reach</td><td>${platform.reach.toLocaleString()}</td></tr>\n          <tr><td>Engagement Rate</td><td>${platform.engagementRate}%</td></tr>\n          ${platform.totalTweets ? `<tr><td>Total Tweets</td><td>${platform.totalTweets}</td></tr>` : ''}\n          ${platform.totalPosts ? `<tr><td>Total Posts</td><td>${platform.totalPosts}</td></tr>` : ''}\n          ${platform.retweets ? `<tr><td>Retweets</td><td>${platform.retweets.toLocaleString()}</td></tr>` : ''}\n          ${platform.likes ? `<tr><td>Likes</td><td>${platform.likes.toLocaleString()}</td></tr>` : ''}\n          ${platform.clicks ? `<tr><td>Clicks</td><td>${platform.clicks.toLocaleString()}</td></tr>` : ''}\n          ${platform.shares ? `<tr><td>Shares</td><td>${platform.shares.toLocaleString()}</td></tr>` : ''}\n        </table>\n      </div>\n    `).join('')}\n    \n    ${report.errors && report.errors.length > 0 ? `\n      <div class=\"error\">\n        <h3>⚠️ Errors Encountered</h3>\n        ${report.errors.map(e => `<p><strong>${e.platform}:</strong> ${e.error}</p>`).join('')}\n      </div>\n    ` : ''}\n    \n    <p style=\"margin-top: 30px; color: #666; font-size: 12px; text-align: center;\">\n      Report generated on ${new Date(report.reportDate).toLocaleString()}<br>\n      Automated by n8n Workflow\n    </p>\n  </div>\n</body>\n</html>\n`;\n\nreturn {\n  html: html,\n  subject: `📊 Weekly Social Media Report: ${report.periodStart} - ${report.periodEnd}`,\n  report: report\n};"
+      },
+      "id": "format-email",
+      "name": "Format Email Report",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1650, 300]
+    },
+    {
+      "parameters": {
+        "fromEmail": "reports@yourcompany.com",
+        "toEmail": "team@yourcompany.com, manager@yourcompany.com",
+        "subject": "={{ $json.subject }}",
+        "emailType": "html",
+        "message": "={{ $json.html }}",
+        "options": {}
+      },
+      "id": "send-email",
+      "name": "Send Email Report",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [1850, 300],
+      "credentials": {
+        "smtp": {
+          "id": "1",
+          "name": "SMTP account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Error handler for Twitter\nconst error = $input.item.error;\n\nreturn {\n  platform: 'Twitter',\n  impressions: 0,\n  engagements: 0,\n  reach: 0,\n  engagementRate: 0,\n  totalTweets: 0,\n  error: error ? error.message : 'Failed to fetch Twitter data'\n};"
+      },
+      "id": "twitter-error-handler",
+      "name": "Twitter - Error Handler",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1050, 100]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Error handler for LinkedIn\nconst error = $input.item.error;\n\nreturn {\n  platform: 'LinkedIn',\n  impressions: 0,\n  engagements: 0,\n  reach: 0,\n  engagementRate: 0,\n  totalPosts: 0,\n  error: error ? error.message : 'Failed to fetch LinkedIn data'\n};"
+      },
+      "id": "linkedin-error-handler",
+      "name": "LinkedIn - Error Handler",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1050, 500]
+    },
+    {
+      "parameters": {
+        "content": "## 📊 Weekly Social Media Analytics\n\nThis workflow automatically collects and reports social media analytics every Monday at 8:00 AM.\n\n**Features:**\n- Twitter API v2 integration\n- LinkedIn Analytics\n- Automatic date range calculation\n- Error handling for each platform\n- HTML email report with visual metrics",
+        "height": 340,
+        "width": 380
+      },
+      "id": "sticky-note",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [240, 460]
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Calculate Date Range",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculate Date Range": {
+      "main": [
+        [
+          {
+            "node": "Twitter - Get User ID",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "LinkedIn - Get Organization ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twitter - Get User ID": {
+      "main": [
+        [
+          {
+            "node": "Twitter - Get Analytics",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Twitter - Error Handler",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twitter - Get Analytics": {
+      "main": [
+        [
+          {
+            "node": "Twitter - Process Data",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Twitter - Error Handler",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twitter - Process Data": {
+      "main": [
+        [
+          {
+            "node": "Merge All Platform Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LinkedIn - Get Organization ID": {
+      "main": [
+        [
+          {
+            "node": "LinkedIn - Get Analytics",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "LinkedIn - Error Handler",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LinkedIn - Get Analytics": {
+      "main": [
+        [
+          {
+            "node": "LinkedIn - Process Data",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "LinkedIn - Error Handler",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LinkedIn - Process Data": {
+      "main": [
+        [
+          {
+            "node": "Merge All Platform Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twitter - Error Handler": {
+      "main": [
+        [
+          {
+            "node": "Merge All Platform Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LinkedIn - Error Handler": {
+      "main": [
+        [
+          {
+            "node": "Merge All Platform Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge All Platform Data": {
+      "main": [
+        [
+          {
+            "node": "Aggregate Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate Report": {
+      "main": [
+        [
+          {
+            "node": "Format Email Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Email Report": {
+      "main": [
+        [
+          {
+            "node": "Send Email Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2026-01-04T08:00:00.000Z",
+  "versionId": "1"
+}
