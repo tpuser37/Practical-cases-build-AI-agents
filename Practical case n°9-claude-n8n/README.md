@@ -79,5 +79,5 @@ Claude provides:
 - **Setup instructions** for credentials and configuration
 - **Customization tips** for adapting to your needs
 ### Output: 
-<img width="1276" height="488" alt="image" src="https://github.com/user-attachments/assets/7489b7b8-2158-45ca-9e3a-0f205190a20f" />
+<img width="1276" height="488" alt="531723079-7489b7b8-2158-45ca-9e3a-0f205190a20f" src="https://github.com/user-attachments/assets/65951b93-5a44-4986-8981-dbdbff0fc1e4" />
 
