@@ -1,6 +1,6 @@
 # 🎥 Video – Activepieces Claude Use Case
 
-https://github.com/user-attachments/assets/08d570de-c117-4feb-98bf-04c9d6c00f5a
+https://github.com/user-attachments/assets/80b1d467-c43e-47ac-b9b1-d15cbcf3e662
 
 ## 🧩 Overview
 
